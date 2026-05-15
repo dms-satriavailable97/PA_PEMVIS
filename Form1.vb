@@ -1,0 +1,141 @@
+﻿Imports MySqlConnector
+
+Public Class Form1
+
+    Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        TampilData()
+        IsiComboLayanan()
+        Kosongkan()
+    End Sub
+
+    Sub TampilData()
+        dgvJoki.DataSource = TampilJoki()
+    End Sub
+
+    Sub IsiComboLayanan()
+        Dim dt As DataTable = GetLayananForCombo()
+        cmbLayanan.DataSource = dt
+        cmbLayanan.DisplayMember = "nama_layanan"
+        cmbLayanan.ValueMember = "id_layanan"
+        cmbLayanan.SelectedIndex = -1
+    End Sub
+
+    Sub Kosongkan()
+        txtUID.Clear()
+        txtUsername.Clear()
+        txtPassword.Clear()
+        cmbLayanan.SelectedIndex = -1
+        cmbKesulitan.SelectedIndex = -1
+        txtUID.Enabled = True
+        ErrorProvider1.Clear()
+    End Sub
+
+    Private Function HitungTotal() As Integer
+        Dim row As DataRowView = cmbLayanan.SelectedItem
+        Dim idLay As String = row("id_layanan").ToString()
+        Dim dtLay As DataTable = TampilLayanan()
+        Dim hargaDasar As Integer = 0
+
+        For Each r As DataRow In dtLay.Rows
+            If r("id_layanan").ToString() = idLay Then
+                hargaDasar = Convert.ToInt32(r("harga_dasar"))
+            End If
+        Next
+
+        Dim sulit As Integer = Convert.ToInt32(cmbKesulitan.Text)
+        Return hargaDasar * sulit
+    End Function
+
+    Private Sub btnSimpan_Click(sender As Object, e As EventArgs) Handles btnSimpan.Click
+        If Not ValidasiInputJoki(ErrorProvider1, txtUID, txtUsername, txtPassword, txtDetail, cmbLayanan) Then Exit Sub
+
+        Dim total As Integer = HitungTotal()
+        If SimpanJoki(txtUID.Text, txtUsername.Text, txtPassword.Text, txtDetail.Text, cmbLayanan.SelectedValue.ToString(), Convert.ToInt32(cmbKesulitan.Text), total) Then
+            MessageBox.Show("Berhasil simpan!")
+            TampilData()
+            Kosongkan()
+        End If
+    End Sub
+
+    Private Sub btnUbah_Click(sender As Object, e As EventArgs) Handles btnUbah.Click
+        If txtUID.Text = "" Then
+            MessageBox.Show("Pilih data di tabel dulu!")
+            Exit Sub
+        End If
+
+        Dim total As Integer = HitungTotal()
+        If UbahJoki(txtUID.Text, txtUsername.Text, txtPassword.Text, txtDetail.Text, cmbLayanan.SelectedValue.ToString(), Convert.ToInt32(cmbKesulitan.Text), total) Then
+            MessageBox.Show("Data UID " & txtUID.Text & " berhasil diupdate!")
+            TampilData()
+            Kosongkan()
+        End If
+    End Sub
+
+    Private Sub btnHapus_Click(sender As Object, e As EventArgs) Handles btnHapus.Click
+        If txtUID.Text = "" Then
+            MessageBox.Show("Pilih data di tabel dulu!")
+            Exit Sub
+        End If
+
+        Dim yakin = MessageBox.Show("Hapus UID " & txtUID.Text & "?", "Konfirmasi", MessageBoxButtons.YesNo)
+        If yakin = DialogResult.Yes Then
+            If HapusJoki(txtUID.Text) Then
+                MessageBox.Show("Data terhapus!")
+                TampilData()
+                Kosongkan()
+            End If
+        End If
+    End Sub
+
+    Private Sub dgvJoki_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvJoki.CellClick
+        If e.RowIndex >= 0 Then
+            Dim row As DataGridViewRow = dgvJoki.Rows(e.RowIndex)
+            txtUID.Text = row.Cells("uid").Value.ToString()
+            txtUsername.Text = row.Cells("username").Value.ToString()
+
+            txtPassword.Text = row.Cells("password").Value.ToString()
+            txtUID.Enabled = False
+
+            txtDetail.Text = row.Cells("detail").Value.ToString()
+
+            cmbLayanan.Text = row.Cells("Jenis Layanan").Value.ToString()
+            cmbKesulitan.Text = row.Cells("kesulitan").Value.ToString()
+        End If
+    End Sub
+
+    Private Sub btnBatal_Click(sender As Object, e As EventArgs) Handles btnBatal.Click
+        Kosongkan()
+    End Sub
+
+    Private Sub txtSearch_TextChanged(sender As Object, e As EventArgs) Handles txtSearch.TextChanged
+        If txtSearch.Text.Trim() = "" Then
+            TampilData()
+        Else
+            dgvJoki.DataSource = CariJoki(txtSearch.Text.Trim())
+        End If
+    End Sub
+
+    Private Sub btnMasterLayanan_Click(sender As Object, e As EventArgs) Handles btnMasterLayanan.Click
+        Form2.ShowDialog()
+        TampilData()
+        IsiComboLayanan()
+    End Sub
+
+    Private Sub txtUID_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtUID.KeyPress
+        ValidationModule.HanyaAngka(e)
+    End Sub
+
+    Private Sub btnSelesai_Click(sender As Object, e As EventArgs) Handles btnSelesai.Click
+        If txtUID.Text = "" Then Exit Sub
+        If UpdateStatusJoki(txtUID.Text, "3") Then ' 3 = ID Status Selesai
+            MessageBox.Show("Status diupdate ke Selesai!")
+            TampilData()
+        End If
+    End Sub
+
+    Private Sub btnLihatPendapatan_Click(sender As Object, e As EventArgs) Handles btnLihatPendapatan.Click
+        Dim total As Integer = HitungTotalPendapatan()
+        MessageBox.Show("Total Pendapatan dari Order Selesai: Rp " & total.ToString("N0"), "Laporan Keuangan")
+    End Sub
+
+End Class

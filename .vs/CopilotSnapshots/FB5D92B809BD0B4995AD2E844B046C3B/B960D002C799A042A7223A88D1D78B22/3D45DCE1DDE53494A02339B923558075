@@ -1,0 +1,134 @@
+﻿Imports MySqlConnector
+
+Public Class Form1
+
+    Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        TampilData()
+        IsiComboLayanan()
+        Kosongkan()
+    End Sub
+
+    Private Sub IsiComboLayanan()
+        Dim dt As DataTable = GetLayananForCombo()
+        cmbLayanan.DataSource = dt
+        cmbLayanan.DisplayMember = "nama_layanan"
+        cmbLayanan.ValueMember = "id_layanan"
+        cmbLayanan.SelectedIndex = -1
+    End Sub
+
+    Private Sub TampilData()
+        dgvJoki.DataSource = TampilJoki()
+    End Sub
+
+    Private Sub Kosongkan()
+        txtUID.Clear()
+        txtUsername.Clear()
+        txtPassword.Clear()
+        cmbLayanan.SelectedIndex = -1
+        cmbKesulitan.SelectedIndex = -1
+        ErrorProvider1.Clear()
+        txtUID.Focus()
+    End Sub
+
+    Private Sub btnSimpan_Click(sender As Object, e As EventArgs) Handles btnSimpan.Click
+        If Not ValidasiInputJoki(ErrorProvider1, txtUID, txtUsername, txtPassword, cmbLayanan) Then Exit Sub
+
+        ' Rumus Hitung Harga: (Harga Dasar Layanan) + (Kesulitan * 10000)
+        ' Kita ambil harga dasar dari baris yang dipilih di ComboBox
+        Dim row As DataRowView = cmbLayanan.SelectedItem
+        Dim idLay As String = row("id_layanan").ToString()
+
+        ' Cari harga dasar dari database berdasarkan ID yang dipilih
+        Dim dtLay As DataTable = TampilLayanan()
+        Dim hargaDasar As Integer = 0
+        For Each r As DataRow In dtLay.Rows
+            If r("id_layanan").ToString() = idLay Then
+                hargaDasar = Convert.ToInt32(r("harga_dasar"))
+            End If
+        Next
+
+        Dim tingkatKesulitan As Integer = Convert.ToInt32(cmbKesulitan.Text)
+        Dim totalHarga As Integer = hargaDasar + (tingkatKesulitan * 10000)
+
+        If SimpanJoki(txtUID.Text, txtUsername.Text, txtPassword.Text, idLay, tingkatKesulitan, totalHarga) Then
+            MessageBox.Show("Antrean Joki berhasil disimpan! Total: Rp " & totalHarga)
+            TampilData()
+            Kosongkan()
+        End If
+    End Sub
+
+    Private Sub btnBatal_Click(sender As Object, e As EventArgs) Handles btnBatal.Click
+        Kosongkan()
+    End Sub
+
+    Private Sub btnMasterLayanan_Click(sender As Object, e As EventArgs) Handles btnMasterLayanan.Click
+        Form2.ShowDialog()
+        IsiComboLayanan() ' Refresh list kalau ada layanan baru dari Form 2
+    End Sub
+
+    Private Sub txtUID_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtUID.KeyPress
+        HanyaAngka(e)
+    End Sub
+
+    Private Sub txtSearch_TextChanged(sender As Object, e As EventArgs) Handles txtSearch.TextChanged
+        If txtSearch.Text.Trim() = "" Then
+            TampilData()
+        Else
+            dgvJoki.DataSource = CariJoki(txtSearch.Text.Trim())
+        End If
+    End Sub
+
+    ' Menampilkan data dari tabel ke TextBox saat baris diklik
+    Private Sub dgvJoki_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvJoki.CellClick
+        If e.RowIndex >= 0 Then
+            Dim row As DataGridViewRow = dgvJoki.Rows(e.RowIndex)
+            txtUID.Text = row.Cells("uid").Value.ToString()
+            txtUsername.Text = row.Cells("username").Value.ToString()
+            ' Untuk Password, Layanan, dan Kesulitan biasanya perlu diisi ulang manual 
+            ' atau diambil lagi dari database demi keamanan.
+        End If
+    End Sub
+
+    ' Tombol Ubah (Update)
+    Private Sub btnUbah_Click(sender As Object, e As EventArgs) Handles btnUbah.Click
+        If txtUID.Text = "" Then
+            MessageBox.Show("Pilih data di tabel yang ingin diubah!")
+            Exit Sub
+        End If
+
+        ' Hitung ulang harga jika layanan atau kesulitan diganti
+        Dim row As DataRowView = cmbLayanan.SelectedItem
+        Dim idLay As String = row("id_layanan").ToString()
+        Dim dtLay As DataTable = TampilLayanan()
+        Dim hargaDasar As Integer = 0
+
+        For Each r As DataRow In dtLay.Rows
+            If r("id_layanan").ToString() = idLay Then
+                hargaDasar = Convert.ToInt32(r("harga_dasar"))
+            End If
+        Next
+
+        Dim totalBaru As Integer = hargaDasar + (Convert.ToInt32(cmbKesulitan.Text) * 10000)
+
+        ' Kamu perlu buat fungsi UbahJoki di DataModule (UPDATE tb_joki SET ...)
+        ' Jika sudah ada, panggil di sini
+        MessageBox.Show("Data UID " & txtUID.Text & " berhasil diperbarui!")
+        TampilData()
+        Kosongkan()
+    End Sub
+
+    ' Tombol Hapus (Delete)
+    Private Sub btnHapus_Click(sender As Object, e As EventArgs) Handles btnHapus.Click
+        If txtUID.Text = "" Then
+            MessageBox.Show("Pilih data yang akan dihapus!")
+            Exit Sub
+        End If
+
+        Dim Tanya = MessageBox.Show("Hapus permanen data UID: " & txtUID.Text & "?", "Konfirmasi", MessageBoxButtons.YesNo)
+        If Tanya = DialogResult.Yes Then
+            ' Panggil fungsi HapusJoki(txtUID.Text) dari DataModule
+            TampilData()
+            Kosongkan()
+        End If
+    End Sub
+End Class

@@ -1,0 +1,159 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\ASUS\\source\\repos\\POSTTEST_VIS\\POSTTEST_6\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{D70E978C-9D8E-8704-C08A-EC98CC2A6D99}|POSTTEST_6.vbproj|c:\\users\\asus\\source\\repos\\posttest_vis\\posttest_6\\form1.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
+      "RelativeMoniker": "D:0:0:{D70E978C-9D8E-8704-C08A-EC98CC2A6D99}|POSTTEST_6.vbproj|solutionrelative:form1.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D70E978C-9D8E-8704-C08A-EC98CC2A6D99}|POSTTEST_6.vbproj|c:\\users\\asus\\source\\repos\\posttest_vis\\posttest_6\\form1.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{D70E978C-9D8E-8704-C08A-EC98CC2A6D99}|POSTTEST_6.vbproj|solutionrelative:form1.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D70E978C-9D8E-8704-C08A-EC98CC2A6D99}|POSTTEST_6.vbproj|c:\\users\\asus\\source\\repos\\posttest_vis\\posttest_6\\datamodule.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{D70E978C-9D8E-8704-C08A-EC98CC2A6D99}|POSTTEST_6.vbproj|solutionrelative:datamodule.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D70E978C-9D8E-8704-C08A-EC98CC2A6D99}|POSTTEST_6.vbproj|c:\\users\\asus\\source\\repos\\posttest_vis\\posttest_6\\form2.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
+      "RelativeMoniker": "D:0:0:{D70E978C-9D8E-8704-C08A-EC98CC2A6D99}|POSTTEST_6.vbproj|solutionrelative:form2.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D70E978C-9D8E-8704-C08A-EC98CC2A6D99}|POSTTEST_6.vbproj|c:\\users\\asus\\source\\repos\\posttest_vis\\posttest_6\\form2.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{D70E978C-9D8E-8704-C08A-EC98CC2A6D99}|POSTTEST_6.vbproj|solutionrelative:form2.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D70E978C-9D8E-8704-C08A-EC98CC2A6D99}|POSTTEST_6.vbproj|c:\\users\\asus\\source\\repos\\posttest_vis\\posttest_6\\my project\\application.designer.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{D70E978C-9D8E-8704-C08A-EC98CC2A6D99}|POSTTEST_6.vbproj|solutionrelative:my project\\application.designer.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D70E978C-9D8E-8704-C08A-EC98CC2A6D99}|POSTTEST_6.vbproj|c:\\users\\asus\\source\\repos\\posttest_vis\\posttest_6\\form1.designer.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{D70E978C-9D8E-8704-C08A-EC98CC2A6D99}|POSTTEST_6.vbproj|solutionrelative:form1.designer.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D70E978C-9D8E-8704-C08A-EC98CC2A6D99}|POSTTEST_6.vbproj|c:\\users\\asus\\source\\repos\\posttest_vis\\posttest_6\\validationmodule.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{D70E978C-9D8E-8704-C08A-EC98CC2A6D99}|POSTTEST_6.vbproj|solutionrelative:validationmodule.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Form1.vb [Design]",
+              "DocumentMoniker": "C:\\Users\\ASUS\\source\\repos\\POSTTEST_VIS\\POSTTEST_6\\Form1.vb",
+              "RelativeDocumentMoniker": "Form1.vb",
+              "ToolTip": "C:\\Users\\ASUS\\source\\repos\\POSTTEST_VIS\\POSTTEST_6\\Form1.vb [Design]",
+              "RelativeToolTip": "Form1.vb [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2026-04-18T16:13:44.757Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Form1.vb",
+              "DocumentMoniker": "C:\\Users\\ASUS\\source\\repos\\POSTTEST_VIS\\POSTTEST_6\\Form1.vb",
+              "RelativeDocumentMoniker": "Form1.vb",
+              "ToolTip": "C:\\Users\\ASUS\\source\\repos\\POSTTEST_VIS\\POSTTEST_6\\Form1.vb",
+              "RelativeToolTip": "Form1.vb",
+              "ViewState": "AgIAAFUAAAAAAAAAAAAewGUAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2026-04-18T16:59:45.883Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Form2.vb [Design]",
+              "DocumentMoniker": "C:\\Users\\ASUS\\source\\repos\\POSTTEST_VIS\\POSTTEST_6\\Form2.vb",
+              "RelativeDocumentMoniker": "Form2.vb",
+              "ToolTip": "C:\\Users\\ASUS\\source\\repos\\POSTTEST_VIS\\POSTTEST_6\\Form2.vb [Design]",
+              "RelativeToolTip": "Form2.vb [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2026-04-20T13:25:52.608Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "DataModule.vb",
+              "DocumentMoniker": "C:\\Users\\ASUS\\source\\repos\\POSTTEST_VIS\\POSTTEST_6\\DataModule.vb",
+              "RelativeDocumentMoniker": "DataModule.vb",
+              "ToolTip": "C:\\Users\\ASUS\\source\\repos\\POSTTEST_VIS\\POSTTEST_6\\DataModule.vb",
+              "RelativeToolTip": "DataModule.vb",
+              "ViewState": "AgIAAFAAAAAAAAAAAAAUwGEAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2026-04-18T16:50:03.006Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Application.Designer.vb",
+              "DocumentMoniker": "C:\\Users\\ASUS\\source\\repos\\POSTTEST_VIS\\POSTTEST_6\\My Project\\Application.Designer.vb",
+              "RelativeDocumentMoniker": "My Project\\Application.Designer.vb",
+              "ToolTip": "C:\\Users\\ASUS\\source\\repos\\POSTTEST_VIS\\POSTTEST_6\\My Project\\Application.Designer.vb",
+              "RelativeToolTip": "My Project\\Application.Designer.vb",
+              "ViewState": "AgIAABYAAAAAAAAAAAAEwCMAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2026-04-20T13:30:50.843Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Form2.vb",
+              "DocumentMoniker": "C:\\Users\\ASUS\\source\\repos\\POSTTEST_VIS\\POSTTEST_6\\Form2.vb",
+              "RelativeDocumentMoniker": "Form2.vb",
+              "ToolTip": "C:\\Users\\ASUS\\source\\repos\\POSTTEST_VIS\\POSTTEST_6\\Form2.vb",
+              "RelativeToolTip": "Form2.vb",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAMAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2026-04-18T16:56:24.145Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Form1.Designer.vb",
+              "DocumentMoniker": "C:\\Users\\ASUS\\source\\repos\\POSTTEST_VIS\\POSTTEST_6\\Form1.Designer.vb",
+              "RelativeDocumentMoniker": "Form1.Designer.vb",
+              "ToolTip": "C:\\Users\\ASUS\\source\\repos\\POSTTEST_VIS\\POSTTEST_6\\Form1.Designer.vb",
+              "RelativeToolTip": "Form1.Designer.vb",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2026-04-20T12:36:09.05Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "ValidationModule.vb",
+              "DocumentMoniker": "C:\\Users\\ASUS\\source\\repos\\POSTTEST_VIS\\POSTTEST_6\\ValidationModule.vb",
+              "RelativeDocumentMoniker": "ValidationModule.vb",
+              "ToolTip": "C:\\Users\\ASUS\\source\\repos\\POSTTEST_VIS\\POSTTEST_6\\ValidationModule.vb",
+              "RelativeToolTip": "ValidationModule.vb",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2026-04-18T16:50:49.172Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

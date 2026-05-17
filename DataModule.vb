@@ -1,6 +1,7 @@
 ﻿Imports MySqlConnector
 
 Module DataModule
+    Public SessionUsername As String = ""
     ' --- BAGIAN LAYANAN (MASTER) ---
     Public Function TampilLayanan() As DataTable
         Dim dt As New DataTable()
@@ -289,4 +290,71 @@ Module DataModule
         End Try
         Return total
     End Function
+    Public Function CekPesananAktifUser(pemesan As String) As Boolean
+        Try
+            Dim query As String = "SELECT COUNT(*) FROM tb_joki WHERE username_pemesan = @pemesan AND id_status IN (1, 2)"
+            Using conn As MySqlConnection = GetConnection()
+                conn.Open()
+                Using cmd As New MySqlCommand(query, conn)
+                    cmd.Parameters.AddWithValue("@pemesan", pemesan)
+                    Dim count = Convert.ToInt32(cmd.ExecuteScalar())
+                    Return count > 0
+                End Using
+            End Using
+        Catch ex As Exception
+            MessageBox.Show("Gagal cek status pesanan: " & ex.Message)
+        End Try
+        Return False
+    End Function
+    Public Function BuatPesananUser(uid As String, user As String, pass As String, detail As String, id_lay As String, sulit As Integer, total As Integer, pemesan As String) As Boolean
+        Try
+            Dim query As String = "INSERT INTO tb_joki (uid, username, password, detail, id_layanan, kesulitan, total_harga, id_status, username_pemesan) " &
+                                  "VALUES (@uid, @user, @pass, @detail, @id_lay, @sulit, @total, 1, @pemesan) " &
+                                  "ON DUPLICATE KEY UPDATE username=@user, password=@pass, detail=@detail, id_layanan=@id_lay, kesulitan=@sulit, total_harga=@total, id_status=1, username_pemesan=@pemesan, tgl_order=CURRENT_TIMESTAMP"
+
+            Using conn As MySqlConnection = GetConnection()
+                conn.Open()
+                Using cmd As New MySqlCommand(query, conn)
+                    cmd.Parameters.AddWithValue("@uid", uid)
+                    cmd.Parameters.AddWithValue("@user", user)
+                    cmd.Parameters.AddWithValue("@pass", pass)
+                    cmd.Parameters.AddWithValue("@detail", detail)
+                    cmd.Parameters.AddWithValue("@id_lay", id_lay)
+                    cmd.Parameters.AddWithValue("@sulit", sulit)
+                    cmd.Parameters.AddWithValue("@total", total)
+                    cmd.Parameters.AddWithValue("@pemesan", pemesan)
+                    cmd.ExecuteNonQuery()
+                End Using
+            End Using
+            Return True
+        Catch ex As Exception
+            MessageBox.Show("Gagal mengirim pesanan: " & ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            Return False
+        End Try
+    End Function
+    Public Function TampilJokiUser(pemesan As String) As DataTable
+        Dim dt As New DataTable()
+        Try
+            Dim query As String = "SELECT j.uid, j.username, j.password, j.detail, j.kesulitan, " &
+                                 "l.nama_layanan AS 'Jenis Layanan', " &
+                                 "s.nama_status AS 'Status', " &
+                                 "j.total_harga " &
+                                 "FROM tb_joki j " &
+                                 "INNER JOIN tb_layanan l ON j.id_layanan = l.id_layanan " &
+                                 "INNER JOIN tb_status s ON j.id_status = s.id_status " &
+                                 "WHERE j.username_pemesan = @pemesan " &
+                                 "ORDER BY j.tgl_order DESC" ' Menampilkan data terbaru paling atas
+            Using conn As MySqlConnection = GetConnection()
+                Using da As New MySqlDataAdapter(query, conn)
+                    da.SelectCommand.Parameters.AddWithValue("@pemesan", pemesan)
+                    da.Fill(dt)
+                End Using
+            End Using
+        Catch ex As Exception
+            MessageBox.Show("Gagal ambil data joki user: " & ex.Message)
+        End Try
+        Return dt
+    End Function
+
 End Module
+

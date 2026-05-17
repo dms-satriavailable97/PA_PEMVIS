@@ -41,9 +41,9 @@ Partial Class Form2
         CType(dgvMasterLayanan, ComponentModel.ISupportInitialize).BeginInit()
         CType(ErrorProvider1, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
-        '
+        ' 
         ' LabelTitle
-        '
+        ' 
         LabelTitle.BackColor = Color.Transparent
         LabelTitle.Font = New Font("Cooper Black", 14.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         LabelTitle.Location = New Point(28, 27)
@@ -51,9 +51,9 @@ Partial Class Form2
         LabelTitle.Size = New Size(523, 25)
         LabelTitle.TabIndex = 0
         LabelTitle.Text = "KELOLA LAYANAN JOKI"
-        '
+        ' 
         ' LabelID
-        '
+        ' 
         LabelID.BackColor = Color.Transparent
         LabelID.Font = New Font("Cooper Black", 8.0F)
         LabelID.Location = New Point(28, 75)
@@ -61,9 +61,9 @@ Partial Class Form2
         LabelID.Size = New Size(189, 23)
         LabelID.TabIndex = 1
         LabelID.Text = "ID Layanan"
-        '
+        ' 
         ' LabelNama
-        '
+        ' 
         LabelNama.BackColor = Color.Transparent
         LabelNama.Font = New Font("Cooper Black", 8.0F)
         LabelNama.Location = New Point(28, 110)
@@ -71,9 +71,9 @@ Partial Class Form2
         LabelNama.Size = New Size(213, 23)
         LabelNama.TabIndex = 3
         LabelNama.Text = "Nama Layanan"
-        '
+        ' 
         ' LabelHarga
-        '
+        ' 
         LabelHarga.BackColor = Color.Transparent
         LabelHarga.Font = New Font("Cooper Black", 8.0F)
         LabelHarga.Location = New Point(28, 145)
@@ -81,9 +81,9 @@ Partial Class Form2
         LabelHarga.Size = New Size(189, 23)
         LabelHarga.TabIndex = 5
         LabelHarga.Text = "Harga Default"
-        '
+        ' 
         ' LabelKesulitan1
-        '
+        ' 
         LabelKesulitan1.BackColor = Color.Transparent
         LabelKesulitan1.Font = New Font("Cooper Black", 8.0F)
         LabelKesulitan1.Location = New Point(28, 180)
@@ -91,9 +91,9 @@ Partial Class Form2
         LabelKesulitan1.Size = New Size(320, 23)
         LabelKesulitan1.TabIndex = 7
         LabelKesulitan1.Text = "Nama Tingkat Kesulitan 1"
-        '
+        ' 
         ' LabelKesulitan2
-        '
+        ' 
         LabelKesulitan2.BackColor = Color.Transparent
         LabelKesulitan2.Font = New Font("Cooper Black", 8.0F)
         LabelKesulitan2.Location = New Point(28, 215)
@@ -101,9 +101,9 @@ Partial Class Form2
         LabelKesulitan2.Size = New Size(320, 23)
         LabelKesulitan2.TabIndex = 9
         LabelKesulitan2.Text = "Nama Tingkat Kesulitan 2"
-        '
+        ' 
         ' LabelKesulitan3
-        '
+        ' 
         LabelKesulitan3.BackColor = Color.Transparent
         LabelKesulitan3.Font = New Font("Cooper Black", 8.0F)
         LabelKesulitan3.Location = New Point(28, 250)
@@ -111,72 +111,72 @@ Partial Class Form2
         LabelKesulitan3.Size = New Size(320, 23)
         LabelKesulitan3.TabIndex = 11
         LabelKesulitan3.Text = "Nama Tingkat Kesulitan 3"
-        '
+        ' 
         ' txtIDLayanan
-        '
+        ' 
         txtIDLayanan.BackColor = Color.MintCream
         txtIDLayanan.Font = New Font("Cooper Black", 8.0F)
         txtIDLayanan.Location = New Point(358, 72)
         txtIDLayanan.Name = "txtIDLayanan"
-        txtIDLayanan.Size = New Size(200, 26)
+        txtIDLayanan.Size = New Size(200, 20)
         txtIDLayanan.TabIndex = 2
-        '
+        ' 
         ' txtNamaLayanan
-        '
+        ' 
         txtNamaLayanan.BackColor = Color.MintCream
         txtNamaLayanan.Font = New Font("Cooper Black", 8.0F)
         txtNamaLayanan.Location = New Point(358, 107)
         txtNamaLayanan.Name = "txtNamaLayanan"
-        txtNamaLayanan.Size = New Size(200, 26)
+        txtNamaLayanan.Size = New Size(200, 20)
         txtNamaLayanan.TabIndex = 4
-        '
+        ' 
         ' txtHargaDasar
-        '
+        ' 
         txtHargaDasar.BackColor = Color.MintCream
         txtHargaDasar.Font = New Font("Cooper Black", 8.0F)
         txtHargaDasar.Location = New Point(358, 142)
         txtHargaDasar.Name = "txtHargaDasar"
-        txtHargaDasar.Size = New Size(200, 26)
+        txtHargaDasar.Size = New Size(200, 20)
         txtHargaDasar.TabIndex = 6
-        '
+        ' 
         ' txtKesulitan1
-        '
+        ' 
         txtKesulitan1.BackColor = Color.MintCream
         txtKesulitan1.Font = New Font("Cooper Black", 8.0F)
         txtKesulitan1.Location = New Point(358, 177)
         txtKesulitan1.Name = "txtKesulitan1"
-        txtKesulitan1.Size = New Size(200, 26)
+        txtKesulitan1.Size = New Size(200, 20)
         txtKesulitan1.TabIndex = 8
-        '
+        ' 
         ' txtKesulitan2
-        '
+        ' 
         txtKesulitan2.BackColor = Color.MintCream
         txtKesulitan2.Font = New Font("Cooper Black", 8.0F)
         txtKesulitan2.Location = New Point(358, 212)
         txtKesulitan2.Name = "txtKesulitan2"
-        txtKesulitan2.Size = New Size(200, 26)
+        txtKesulitan2.Size = New Size(200, 20)
         txtKesulitan2.TabIndex = 10
-        '
+        ' 
         ' txtKesulitan3
-        '
+        ' 
         txtKesulitan3.BackColor = Color.MintCream
         txtKesulitan3.Font = New Font("Cooper Black", 8.0F)
         txtKesulitan3.Location = New Point(358, 247)
         txtKesulitan3.Name = "txtKesulitan3"
-        txtKesulitan3.Size = New Size(200, 26)
+        txtKesulitan3.Size = New Size(200, 20)
         txtKesulitan3.TabIndex = 12
-        '
+        ' 
         ' dgvMasterLayanan
-        '
+        ' 
         dgvMasterLayanan.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
         dgvMasterLayanan.Location = New Point(588, 45)
         dgvMasterLayanan.Name = "dgvMasterLayanan"
         dgvMasterLayanan.RowHeadersWidth = 62
         dgvMasterLayanan.Size = New Size(303, 340)
         dgvMasterLayanan.TabIndex = 13
-        '
+        ' 
         ' btnSimpan
-        '
+        ' 
         btnSimpan.BackColor = Color.DarkGoldenrod
         btnSimpan.Font = New Font("Cooper Black", 8.0F)
         btnSimpan.ForeColor = Color.FromArgb(CByte(64), CByte(0), CByte(0))
@@ -186,9 +186,9 @@ Partial Class Form2
         btnSimpan.TabIndex = 14
         btnSimpan.Text = "Simpan"
         btnSimpan.UseVisualStyleBackColor = False
-        '
+        ' 
         ' btnUbah
-        '
+        ' 
         btnUbah.BackColor = Color.DarkGoldenrod
         btnUbah.Font = New Font("Cooper Black", 8.0F)
         btnUbah.ForeColor = Color.FromArgb(CByte(64), CByte(0), CByte(0))
@@ -198,9 +198,9 @@ Partial Class Form2
         btnUbah.TabIndex = 15
         btnUbah.Text = "Ubah"
         btnUbah.UseVisualStyleBackColor = False
-        '
+        ' 
         ' btnHapus
-        '
+        ' 
         btnHapus.BackColor = Color.DarkGoldenrod
         btnHapus.Font = New Font("Cooper Black", 8.0F)
         btnHapus.ForeColor = Color.FromArgb(CByte(64), CByte(0), CByte(0))
@@ -210,9 +210,9 @@ Partial Class Form2
         btnHapus.TabIndex = 16
         btnHapus.Text = "Hapus"
         btnHapus.UseVisualStyleBackColor = False
-        '
+        ' 
         ' btnBatal
-        '
+        ' 
         btnBatal.BackColor = Color.DarkGoldenrod
         btnBatal.Font = New Font("Cooper Black", 8.0F)
         btnBatal.ForeColor = Color.FromArgb(CByte(64), CByte(0), CByte(0))
@@ -222,13 +222,13 @@ Partial Class Form2
         btnBatal.TabIndex = 17
         btnBatal.Text = "Batal"
         btnBatal.UseVisualStyleBackColor = False
-        '
+        ' 
         ' ErrorProvider1
-        '
+        ' 
         ErrorProvider1.ContainerControl = Me
-        '
+        ' 
         ' Form2
-        '
+        ' 
         BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), Image)
         BackgroundImageLayout = ImageLayout.Stretch
         ClientSize = New Size(906, 503)

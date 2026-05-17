@@ -200,19 +200,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\ASUS\\.nuget\\packages\\": {}
+    "C:\\Users\\Rumia\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\ASUS\\Documents\\PA_PEMVIS\\PA_PEMVIS\\POSTTEST_6.vbproj",
+      "projectUniqueName": "C:\\Users\\Rumia\\Documents\\Folder Praktikum\\Projek Akhir\\pemvis\\POSTTEST_6.vbproj",
       "projectName": "POSTTEST_6",
-      "projectPath": "C:\\Users\\ASUS\\Documents\\PA_PEMVIS\\PA_PEMVIS\\POSTTEST_6.vbproj",
-      "packagesPath": "C:\\Users\\ASUS\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\ASUS\\Documents\\PA_PEMVIS\\PA_PEMVIS\\obj\\",
+      "projectPath": "C:\\Users\\Rumia\\Documents\\Folder Praktikum\\Projek Akhir\\pemvis\\POSTTEST_6.vbproj",
+      "packagesPath": "C:\\Users\\Rumia\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Rumia\\Documents\\Folder Praktikum\\Projek Akhir\\pemvis\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\ASUS\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Rumia\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [

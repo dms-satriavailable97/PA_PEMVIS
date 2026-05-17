@@ -59,7 +59,7 @@ Partial Class Form1
         ' LabelUID
         ' 
         LabelUID.BackColor = Color.Transparent
-        LabelUID.Font = New Font("Magic R", 9.0F, FontStyle.Bold)
+        LabelUID.Font = New Font("Microsoft Sans Serif", 9F, FontStyle.Bold)
         LabelUID.ForeColor = Color.White
         LabelUID.Location = New Point(12, 20)
         LabelUID.Name = "LabelUID"
@@ -70,7 +70,7 @@ Partial Class Form1
         ' LabelUser
         ' 
         LabelUser.BackColor = Color.Transparent
-        LabelUser.Font = New Font("Magic R", 9.0F, FontStyle.Bold)
+        LabelUser.Font = New Font("Microsoft Sans Serif", 9F, FontStyle.Bold)
         LabelUser.ForeColor = Color.White
         LabelUser.Location = New Point(11, 63)
         LabelUser.Name = "LabelUser"
@@ -81,7 +81,7 @@ Partial Class Form1
         ' LabelPass
         ' 
         LabelPass.BackColor = Color.Transparent
-        LabelPass.Font = New Font("Magic R", 9.0F, FontStyle.Bold)
+        LabelPass.Font = New Font("Microsoft Sans Serif", 9F, FontStyle.Bold)
         LabelPass.ForeColor = Color.White
         LabelPass.Location = New Point(11, 103)
         LabelPass.Name = "LabelPass"
@@ -92,33 +92,33 @@ Partial Class Form1
         ' LabelLayanan
         ' 
         LabelLayanan.BackColor = Color.Transparent
-        LabelLayanan.Font = New Font("Magic R", 9.0F, FontStyle.Bold)
+        LabelLayanan.Font = New Font("Microsoft Sans Serif", 9F, FontStyle.Bold)
         LabelLayanan.ForeColor = Color.White
         LabelLayanan.Location = New Point(11, 189)
         LabelLayanan.Name = "LabelLayanan"
         LabelLayanan.Size = New Size(157, 33)
         LabelLayanan.TabIndex = 6
-        LabelLayanan.Text = "Pilih Layanan"
+        LabelLayanan.Text = "Layanan Dipilih"
         ' 
         ' txtUID
         ' 
         txtUID.Location = New Point(214, 12)
         txtUID.Name = "txtUID"
-        txtUID.Size = New Size(253, 31)
+        txtUID.Size = New Size(253, 23)
         txtUID.TabIndex = 1
         ' 
         ' txtUsername
         ' 
         txtUsername.Location = New Point(214, 52)
         txtUsername.Name = "txtUsername"
-        txtUsername.Size = New Size(253, 31)
+        txtUsername.Size = New Size(253, 23)
         txtUsername.TabIndex = 3
         ' 
         ' txtPassword
         ' 
         txtPassword.Location = New Point(214, 95)
         txtPassword.Name = "txtPassword"
-        txtPassword.Size = New Size(253, 31)
+        txtPassword.Size = New Size(253, 23)
         txtPassword.TabIndex = 5
         txtPassword.UseSystemPasswordChar = True
         ' 
@@ -127,7 +127,7 @@ Partial Class Form1
         cmbLayanan.DropDownStyle = ComboBoxStyle.DropDownList
         cmbLayanan.Location = New Point(214, 186)
         cmbLayanan.Name = "cmbLayanan"
-        cmbLayanan.Size = New Size(253, 33)
+        cmbLayanan.Size = New Size(253, 23)
         cmbLayanan.TabIndex = 7
         ' 
         ' cmbKesulitan
@@ -136,7 +136,7 @@ Partial Class Form1
         cmbKesulitan.Items.AddRange(New Object() {"1", "2", "3"})
         cmbKesulitan.Location = New Point(214, 229)
         cmbKesulitan.Name = "cmbKesulitan"
-        cmbKesulitan.Size = New Size(250, 33)
+        cmbKesulitan.Size = New Size(250, 23)
         cmbKesulitan.TabIndex = 9
         ' 
         ' dgvJoki
@@ -145,7 +145,7 @@ Partial Class Form1
         dgvJoki.ColumnHeadersHeight = 34
         DataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle1.BackColor = SystemColors.Window
-        DataGridViewCellStyle1.Font = New Font("Segoe UI", 9.0F)
+        DataGridViewCellStyle1.Font = New Font("Segoe UI", 9F)
         DataGridViewCellStyle1.ForeColor = SystemColors.ControlText
         DataGridViewCellStyle1.SelectionBackColor = Color.Red
         DataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText
@@ -161,7 +161,7 @@ Partial Class Form1
         ' btnSimpan
         ' 
         btnSimpan.BackColor = Color.DarkRed
-        btnSimpan.Font = New Font("Magic R", 9.0F)
+        btnSimpan.Font = New Font("Microsoft Sans Serif", 9F)
         btnSimpan.ForeColor = Color.White
         btnSimpan.Location = New Point(20, 344)
         btnSimpan.Name = "btnSimpan"
@@ -173,7 +173,7 @@ Partial Class Form1
         ' btnUbah
         ' 
         btnUbah.BackColor = Color.DarkRed
-        btnUbah.Font = New Font("Magic R", 9.0F)
+        btnUbah.Font = New Font("Microsoft Sans Serif", 9F)
         btnUbah.ForeColor = Color.White
         btnUbah.Location = New Point(140, 344)
         btnUbah.Name = "btnUbah"
@@ -185,7 +185,7 @@ Partial Class Form1
         ' btnHapus
         ' 
         btnHapus.BackColor = Color.DarkRed
-        btnHapus.Font = New Font("Magic R", 9.0F)
+        btnHapus.Font = New Font("Microsoft Sans Serif", 9F)
         btnHapus.ForeColor = Color.White
         btnHapus.Location = New Point(258, 344)
         btnHapus.Name = "btnHapus"
@@ -197,7 +197,7 @@ Partial Class Form1
         ' btnBatal
         ' 
         btnBatal.BackColor = Color.DarkRed
-        btnBatal.Font = New Font("Magic R", 9.0F)
+        btnBatal.Font = New Font("Microsoft Sans Serif", 9F)
         btnBatal.ForeColor = Color.White
         btnBatal.Location = New Point(372, 344)
         btnBatal.Name = "btnBatal"
@@ -209,7 +209,7 @@ Partial Class Form1
         ' btnMasterLayanan
         ' 
         btnMasterLayanan.BackColor = Color.DarkRed
-        btnMasterLayanan.Font = New Font("Magic R", 9.0F)
+        btnMasterLayanan.Font = New Font("Microsoft Sans Serif", 9F)
         btnMasterLayanan.ForeColor = SystemColors.Control
         btnMasterLayanan.Location = New Point(683, 12)
         btnMasterLayanan.Name = "btnMasterLayanan"
@@ -226,13 +226,13 @@ Partial Class Form1
         ' 
         txtSearch.Location = New Point(214, 297)
         txtSearch.Name = "txtSearch"
-        txtSearch.Size = New Size(253, 31)
+        txtSearch.Size = New Size(253, 23)
         txtSearch.TabIndex = 16
         ' 
         ' Label1
         ' 
         Label1.BackColor = Color.Transparent
-        Label1.Font = New Font("Magic R", 9.0F, FontStyle.Bold)
+        Label1.Font = New Font("Microsoft Sans Serif", 9F, FontStyle.Bold)
         Label1.ForeColor = Color.White
         Label1.Location = New Point(11, 232)
         Label1.Name = "Label1"
@@ -243,7 +243,7 @@ Partial Class Form1
         ' Label2
         ' 
         Label2.BackColor = Color.Transparent
-        Label2.Font = New Font("Magic R", 9.0F, FontStyle.Bold)
+        Label2.Font = New Font("Microsoft Sans Serif", 9F, FontStyle.Bold)
         Label2.ForeColor = Color.White
         Label2.Location = New Point(11, 144)
         Label2.Name = "Label2"
@@ -255,13 +255,13 @@ Partial Class Form1
         ' 
         txtDetail.Location = New Point(267, 141)
         txtDetail.Name = "txtDetail"
-        txtDetail.Size = New Size(200, 31)
+        txtDetail.Size = New Size(200, 23)
         txtDetail.TabIndex = 19
         ' 
         ' LabelSulit
         ' 
         LabelSulit.BackColor = Color.Transparent
-        LabelSulit.Font = New Font("Magic R", 9.0F, FontStyle.Bold)
+        LabelSulit.Font = New Font("Microsoft Sans Serif", 9F, FontStyle.Bold)
         LabelSulit.ForeColor = Color.White
         LabelSulit.Location = New Point(11, 300)
         LabelSulit.Name = "LabelSulit"
@@ -316,7 +316,7 @@ Partial Class Form1
         ' btnLihatPendapatan
         ' 
         btnLihatPendapatan.BackColor = Color.DarkRed
-        btnLihatPendapatan.Font = New Font("Magic R", 9.0F)
+        btnLihatPendapatan.Font = New Font("Microsoft Sans Serif", 9F)
         btnLihatPendapatan.ForeColor = SystemColors.Control
         btnLihatPendapatan.Location = New Point(372, 607)
         btnLihatPendapatan.Name = "btnLihatPendapatan"
@@ -328,7 +328,7 @@ Partial Class Form1
         ' btnSelesai
         ' 
         btnSelesai.BackColor = Color.DarkRed
-        btnSelesai.Font = New Font("Magic R", 9.0F)
+        btnSelesai.Font = New Font("Microsoft Sans Serif", 9F)
         btnSelesai.ForeColor = SystemColors.Control
         btnSelesai.Location = New Point(20, 607)
         btnSelesai.Name = "btnSelesai"
@@ -340,9 +340,9 @@ Partial Class Form1
         ' lblHarga
         ' 
         lblHarga.BackColor = Color.Transparent
-        lblHarga.Font = New Font("Magic R", 9.0F, FontStyle.Bold)
+        lblHarga.Font = New Font("Microsoft Sans Serif", 9F, FontStyle.Bold)
         lblHarga.ForeColor = Color.White
-        lblHarga.Location = New Point(214, 270)
+        lblHarga.Location = New Point(214, 266)
         lblHarga.Name = "lblHarga"
         lblHarga.Size = New Size(184, 17)
         lblHarga.TabIndex = 26

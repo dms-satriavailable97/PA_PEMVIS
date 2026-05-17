@@ -22,11 +22,12 @@ Public Class FormLogin
         Select Case role
             Case "admin"
                 MessageBox.Show("Selamat datang, Admin!", "Login Berhasil", MessageBoxButtons.OK, MessageBoxIcon.Information)
-                Form2.Show()
+                Form1.Show()
                 Me.Hide()
             Case "user"
                 MessageBox.Show("Selamat datang, " & username & "!", "Login Berhasil", MessageBoxButtons.OK, MessageBoxIcon.Information)
-                Form1.Show()
+                DataModule.SessionUsername = username
+                Form3.Show()
                 Me.Hide()
             Case Else
                 MessageBox.Show("Username atau password salah!", "Login Gagal", MessageBoxButtons.OK, MessageBoxIcon.Error)

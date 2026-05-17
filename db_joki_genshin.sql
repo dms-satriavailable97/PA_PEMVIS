@@ -63,3 +63,6 @@ CREATE TABLE IF NOT EXISTS tb_user (
 INSERT IGNORE INTO tb_user (username, password, role) VALUES
 ('admin',  'admin123', 'admin'),
 ('user1',  'user123',  'user');
+
+ALTER TABLE tb_joki ADD COLUMN username_pemesan VARCHAR(50) NOT NULL;
+ALTER TABLE tb_joki ADD COLUMN tgl_order TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP;

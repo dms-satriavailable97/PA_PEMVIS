@@ -7,5 +7,11 @@
     <Compile Update="Form2.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="FormLogin.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="FormRegister.vb">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
 </Project>

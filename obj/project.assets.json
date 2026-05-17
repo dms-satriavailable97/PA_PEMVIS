@@ -205,11 +205,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\ASUS\\source\\repos\\POSTTEST_VIS\\POSTTEST_6\\POSTTEST_6.vbproj",
+      "projectUniqueName": "C:\\Users\\ASUS\\Documents\\PA_PEMVIS\\PA_PEMVIS\\POSTTEST_6.vbproj",
       "projectName": "POSTTEST_6",
-      "projectPath": "C:\\Users\\ASUS\\source\\repos\\POSTTEST_VIS\\POSTTEST_6\\POSTTEST_6.vbproj",
+      "projectPath": "C:\\Users\\ASUS\\Documents\\PA_PEMVIS\\PA_PEMVIS\\POSTTEST_6.vbproj",
       "packagesPath": "C:\\Users\\ASUS\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\ASUS\\source\\repos\\POSTTEST_VIS\\POSTTEST_6\\obj\\",
+      "outputPath": "C:\\Users\\ASUS\\Documents\\PA_PEMVIS\\PA_PEMVIS\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\ASUS\\AppData\\Roaming\\NuGet\\NuGet.Config",

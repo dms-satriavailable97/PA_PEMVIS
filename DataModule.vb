@@ -17,15 +17,18 @@ Module DataModule
         Return dt
     End Function
 
-    Public Function SimpanLayanan(id As String, nama As String, harga As Integer) As Boolean
+    Public Function SimpanLayanan(id As String, nama As String, harga As Integer, k1 As String, k2 As String, k3 As String) As Boolean
         Try
-            Dim query As String = "INSERT INTO tb_layanan VALUES (@id, @nama, @harga)"
+            Dim query As String = "INSERT INTO tb_layanan (id_layanan, nama_layanan, harga_dasar, kesulitan1, kesulitan2, kesulitan3) VALUES (@id, @nama, @harga, @k1, @k2, @k3)"
             Using conn As MySqlConnection = GetConnection()
                 conn.Open()
                 Using cmd As New MySqlCommand(query, conn)
                     cmd.Parameters.AddWithValue("@id", id)
                     cmd.Parameters.AddWithValue("@nama", nama)
                     cmd.Parameters.AddWithValue("@harga", harga)
+                    cmd.Parameters.AddWithValue("@k1", k1)
+                    cmd.Parameters.AddWithValue("@k2", k2)
+                    cmd.Parameters.AddWithValue("@k3", k3)
                     cmd.ExecuteNonQuery()
                 End Using
             End Using
@@ -36,15 +39,18 @@ Module DataModule
         End Try
     End Function
 
-    Public Function UbahLayanan(id As String, nama As String, harga As Integer) As Boolean
+    Public Function UbahLayanan(id As String, nama As String, harga As Integer, k1 As String, k2 As String, k3 As String) As Boolean
         Try
-            Dim query As String = "UPDATE tb_layanan SET nama_layanan=@nama, harga_dasar=@harga WHERE id_layanan=@id"
+            Dim query As String = "UPDATE tb_layanan SET nama_layanan=@nama, harga_dasar=@harga, kesulitan1=@k1, kesulitan2=@k2, kesulitan3=@k3 WHERE id_layanan=@id"
             Using conn As MySqlConnection = GetConnection()
                 conn.Open()
                 Using cmd As New MySqlCommand(query, conn)
                     cmd.Parameters.AddWithValue("@id", id)
                     cmd.Parameters.AddWithValue("@nama", nama)
                     cmd.Parameters.AddWithValue("@harga", harga)
+                    cmd.Parameters.AddWithValue("@k1", k1)
+                    cmd.Parameters.AddWithValue("@k2", k2)
+                    cmd.Parameters.AddWithValue("@k3", k3)
                     cmd.ExecuteNonQuery()
                 End Using
             End Using
@@ -76,7 +82,6 @@ Module DataModule
     Public Function TampilJoki() As DataTable
         Dim dt As New DataTable()
         Try
-            ' Perhatikan penambahan tanda koma setelah j.kesulitan
             Dim query As String = "SELECT j.uid, j.username, j.password, j.detail, j.kesulitan, " &
                              "l.nama_layanan AS 'Jenis Layanan', " &
                              "s.nama_status AS 'Status', " &
@@ -85,7 +90,6 @@ Module DataModule
                              "INNER JOIN tb_layanan l ON j.id_layanan = l.id_layanan " &
                              "INNER JOIN tb_status s ON j.id_status = s.id_status " &
                              "ORDER BY j.uid ASC"
-
             Using conn As MySqlConnection = GetConnection()
                 Using da As New MySqlDataAdapter(query, conn)
                     da.Fill(dt)
@@ -101,7 +105,6 @@ Module DataModule
         Try
             Dim query As String = "INSERT INTO tb_joki (uid, username, password, detail, id_layanan, kesulitan, total_harga, id_status) " &
                               "VALUES (@uid, @user, @pass, @detail, @id_lay, @sulit, @total, 1)"
-
             Using conn As MySqlConnection = GetConnection()
                 conn.Open()
                 Using cmd As New MySqlCommand(query, conn)
@@ -183,7 +186,7 @@ Module DataModule
     Public Function GetLayananForCombo() As DataTable
         Dim dt As New DataTable()
         Try
-            Dim query As String = "SELECT id_layanan, nama_layanan FROM tb_layanan"
+            Dim query As String = "SELECT id_layanan, nama_layanan, kesulitan1, kesulitan2, kesulitan3 FROM tb_layanan"
             Using conn As MySqlConnection = GetConnection()
                 Using da As New MySqlDataAdapter(query, conn)
                     da.Fill(dt)
@@ -195,7 +198,6 @@ Module DataModule
         Return dt
     End Function
 
-    ' Fungsi Update Status
     Public Function UpdateStatusJoki(uid As String, id_status As String) As Boolean
         Try
             Dim query As String = "UPDATE tb_joki SET id_status=@id_status WHERE uid=@uid"
@@ -214,7 +216,63 @@ Module DataModule
         End Try
     End Function
 
-    ' Fungsi Hitung Pendapatan (Hanya yang berstatus 'Selesai' / ID 3)
+    ' --- BAGIAN AUTENTIKASI ---
+    Public Function LoginUser(username As String, password As String) As String
+        Try
+            Dim query As String = "SELECT role FROM tb_user WHERE username = @username AND password = @password LIMIT 1"
+            Using conn As MySqlConnection = GetConnection()
+                conn.Open()
+                Using cmd As New MySqlCommand(query, conn)
+                    cmd.Parameters.AddWithValue("@username", username)
+                    cmd.Parameters.AddWithValue("@password", password)
+                    Dim result = cmd.ExecuteScalar()
+                    If result IsNot Nothing AndAlso result IsNot DBNull.Value Then
+                        Return result.ToString()
+                    End If
+                End Using
+            End Using
+        Catch ex As Exception
+            MessageBox.Show("Gagal login: " & ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        End Try
+        Return ""
+    End Function
+
+    Public Function RegisterUser(username As String, password As String, role As String) As Boolean
+        Try
+            Dim query As String = "INSERT INTO tb_user (username, password, role) VALUES (@username, @password, @role)"
+            Using conn As MySqlConnection = GetConnection()
+                conn.Open()
+                Using cmd As New MySqlCommand(query, conn)
+                    cmd.Parameters.AddWithValue("@username", username)
+                    cmd.Parameters.AddWithValue("@password", password)
+                    cmd.Parameters.AddWithValue("@role", role)
+                    cmd.ExecuteNonQuery()
+                End Using
+            End Using
+            Return True
+        Catch ex As Exception
+            MessageBox.Show("Gagal register: " & ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            Return False
+        End Try
+    End Function
+
+    Public Function CekUsernameAda(username As String) As Boolean
+        Try
+            Dim query As String = "SELECT COUNT(*) FROM tb_user WHERE username = @username"
+            Using conn As MySqlConnection = GetConnection()
+                conn.Open()
+                Using cmd As New MySqlCommand(query, conn)
+                    cmd.Parameters.AddWithValue("@username", username)
+                    Dim count = Convert.ToInt32(cmd.ExecuteScalar())
+                    Return count > 0
+                End Using
+            End Using
+        Catch ex As Exception
+            MessageBox.Show("Gagal cek username: " & ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        End Try
+        Return False
+    End Function
+
     Public Function HitungTotalPendapatan() As Integer
         Dim total As Integer = 0
         Try

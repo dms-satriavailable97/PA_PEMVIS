@@ -47,6 +47,7 @@ Partial Class Form1
         PictureBox4 = New PictureBox()
         btnLihatPendapatan = New Button()
         btnSelesai = New Button()
+        lblHarga = New Label()
         CType(dgvJoki, ComponentModel.ISupportInitialize).BeginInit()
         CType(ErrorProvider1, ComponentModel.ISupportInitialize).BeginInit()
         CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
@@ -58,7 +59,7 @@ Partial Class Form1
         ' LabelUID
         ' 
         LabelUID.BackColor = Color.Transparent
-        LabelUID.Font = New Font("Magic R", 9F, FontStyle.Bold)
+        LabelUID.Font = New Font("Magic R", 9.0F, FontStyle.Bold)
         LabelUID.ForeColor = Color.White
         LabelUID.Location = New Point(12, 20)
         LabelUID.Name = "LabelUID"
@@ -69,7 +70,7 @@ Partial Class Form1
         ' LabelUser
         ' 
         LabelUser.BackColor = Color.Transparent
-        LabelUser.Font = New Font("Magic R", 9F, FontStyle.Bold)
+        LabelUser.Font = New Font("Magic R", 9.0F, FontStyle.Bold)
         LabelUser.ForeColor = Color.White
         LabelUser.Location = New Point(11, 63)
         LabelUser.Name = "LabelUser"
@@ -80,7 +81,7 @@ Partial Class Form1
         ' LabelPass
         ' 
         LabelPass.BackColor = Color.Transparent
-        LabelPass.Font = New Font("Magic R", 9F, FontStyle.Bold)
+        LabelPass.Font = New Font("Magic R", 9.0F, FontStyle.Bold)
         LabelPass.ForeColor = Color.White
         LabelPass.Location = New Point(11, 103)
         LabelPass.Name = "LabelPass"
@@ -91,7 +92,7 @@ Partial Class Form1
         ' LabelLayanan
         ' 
         LabelLayanan.BackColor = Color.Transparent
-        LabelLayanan.Font = New Font("Magic R", 9F, FontStyle.Bold)
+        LabelLayanan.Font = New Font("Magic R", 9.0F, FontStyle.Bold)
         LabelLayanan.ForeColor = Color.White
         LabelLayanan.Location = New Point(11, 189)
         LabelLayanan.Name = "LabelLayanan"
@@ -144,7 +145,7 @@ Partial Class Form1
         dgvJoki.ColumnHeadersHeight = 34
         DataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle1.BackColor = SystemColors.Window
-        DataGridViewCellStyle1.Font = New Font("Segoe UI", 9F)
+        DataGridViewCellStyle1.Font = New Font("Segoe UI", 9.0F)
         DataGridViewCellStyle1.ForeColor = SystemColors.ControlText
         DataGridViewCellStyle1.SelectionBackColor = Color.Red
         DataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText
@@ -160,9 +161,9 @@ Partial Class Form1
         ' btnSimpan
         ' 
         btnSimpan.BackColor = Color.DarkRed
-        btnSimpan.Font = New Font("Magic R", 9F)
+        btnSimpan.Font = New Font("Magic R", 9.0F)
         btnSimpan.ForeColor = Color.White
-        btnSimpan.Location = New Point(20, 320)
+        btnSimpan.Location = New Point(20, 344)
         btnSimpan.Name = "btnSimpan"
         btnSimpan.Size = New Size(95, 46)
         btnSimpan.TabIndex = 10
@@ -172,9 +173,9 @@ Partial Class Form1
         ' btnUbah
         ' 
         btnUbah.BackColor = Color.DarkRed
-        btnUbah.Font = New Font("Magic R", 9F)
+        btnUbah.Font = New Font("Magic R", 9.0F)
         btnUbah.ForeColor = Color.White
-        btnUbah.Location = New Point(140, 320)
+        btnUbah.Location = New Point(140, 344)
         btnUbah.Name = "btnUbah"
         btnUbah.Size = New Size(95, 46)
         btnUbah.TabIndex = 11
@@ -184,9 +185,9 @@ Partial Class Form1
         ' btnHapus
         ' 
         btnHapus.BackColor = Color.DarkRed
-        btnHapus.Font = New Font("Magic R", 9F)
+        btnHapus.Font = New Font("Magic R", 9.0F)
         btnHapus.ForeColor = Color.White
-        btnHapus.Location = New Point(258, 320)
+        btnHapus.Location = New Point(258, 344)
         btnHapus.Name = "btnHapus"
         btnHapus.Size = New Size(95, 46)
         btnHapus.TabIndex = 12
@@ -196,9 +197,9 @@ Partial Class Form1
         ' btnBatal
         ' 
         btnBatal.BackColor = Color.DarkRed
-        btnBatal.Font = New Font("Magic R", 9F)
+        btnBatal.Font = New Font("Magic R", 9.0F)
         btnBatal.ForeColor = Color.White
-        btnBatal.Location = New Point(372, 320)
+        btnBatal.Location = New Point(372, 344)
         btnBatal.Name = "btnBatal"
         btnBatal.Size = New Size(95, 46)
         btnBatal.TabIndex = 13
@@ -208,7 +209,7 @@ Partial Class Form1
         ' btnMasterLayanan
         ' 
         btnMasterLayanan.BackColor = Color.DarkRed
-        btnMasterLayanan.Font = New Font("Magic R", 9F)
+        btnMasterLayanan.Font = New Font("Magic R", 9.0F)
         btnMasterLayanan.ForeColor = SystemColors.Control
         btnMasterLayanan.Location = New Point(683, 12)
         btnMasterLayanan.Name = "btnMasterLayanan"
@@ -223,7 +224,7 @@ Partial Class Form1
         ' 
         ' txtSearch
         ' 
-        txtSearch.Location = New Point(214, 269)
+        txtSearch.Location = New Point(214, 297)
         txtSearch.Name = "txtSearch"
         txtSearch.Size = New Size(253, 31)
         txtSearch.TabIndex = 16
@@ -231,7 +232,7 @@ Partial Class Form1
         ' Label1
         ' 
         Label1.BackColor = Color.Transparent
-        Label1.Font = New Font("Magic R", 9F, FontStyle.Bold)
+        Label1.Font = New Font("Magic R", 9.0F, FontStyle.Bold)
         Label1.ForeColor = Color.White
         Label1.Location = New Point(11, 232)
         Label1.Name = "Label1"
@@ -242,7 +243,7 @@ Partial Class Form1
         ' Label2
         ' 
         Label2.BackColor = Color.Transparent
-        Label2.Font = New Font("Magic R", 9F, FontStyle.Bold)
+        Label2.Font = New Font("Magic R", 9.0F, FontStyle.Bold)
         Label2.ForeColor = Color.White
         Label2.Location = New Point(11, 144)
         Label2.Name = "Label2"
@@ -260,9 +261,9 @@ Partial Class Form1
         ' LabelSulit
         ' 
         LabelSulit.BackColor = Color.Transparent
-        LabelSulit.Font = New Font("Magic R", 9F, FontStyle.Bold)
+        LabelSulit.Font = New Font("Magic R", 9.0F, FontStyle.Bold)
         LabelSulit.ForeColor = Color.White
-        LabelSulit.Location = New Point(11, 272)
+        LabelSulit.Location = New Point(11, 300)
         LabelSulit.Name = "LabelSulit"
         LabelSulit.Size = New Size(142, 28)
         LabelSulit.TabIndex = 8
@@ -305,7 +306,7 @@ Partial Class Form1
         ' 
         PictureBox4.BackColor = Color.Transparent
         PictureBox4.Image = My.Resources.Resources.image_1775972612373
-        PictureBox4.Location = New Point(498, 189)
+        PictureBox4.Location = New Point(498, 186)
         PictureBox4.Name = "PictureBox4"
         PictureBox4.Size = New Size(193, 201)
         PictureBox4.SizeMode = PictureBoxSizeMode.Zoom
@@ -315,7 +316,7 @@ Partial Class Form1
         ' btnLihatPendapatan
         ' 
         btnLihatPendapatan.BackColor = Color.DarkRed
-        btnLihatPendapatan.Font = New Font("Magic R", 9F)
+        btnLihatPendapatan.Font = New Font("Magic R", 9.0F)
         btnLihatPendapatan.ForeColor = SystemColors.Control
         btnLihatPendapatan.Location = New Point(372, 607)
         btnLihatPendapatan.Name = "btnLihatPendapatan"
@@ -327,7 +328,7 @@ Partial Class Form1
         ' btnSelesai
         ' 
         btnSelesai.BackColor = Color.DarkRed
-        btnSelesai.Font = New Font("Magic R", 9F)
+        btnSelesai.Font = New Font("Magic R", 9.0F)
         btnSelesai.ForeColor = SystemColors.Control
         btnSelesai.Location = New Point(20, 607)
         btnSelesai.Name = "btnSelesai"
@@ -336,11 +337,24 @@ Partial Class Form1
         btnSelesai.Text = "Update Selesai"
         btnSelesai.UseVisualStyleBackColor = False
         ' 
+        ' lblHarga
+        ' 
+        lblHarga.BackColor = Color.Transparent
+        lblHarga.Font = New Font("Magic R", 9.0F, FontStyle.Bold)
+        lblHarga.ForeColor = Color.White
+        lblHarga.Location = New Point(214, 270)
+        lblHarga.Name = "lblHarga"
+        lblHarga.Size = New Size(184, 17)
+        lblHarga.TabIndex = 26
+        lblHarga.Text = "Tingkat Kesulitan"
+        lblHarga.Visible = False
+        ' 
         ' Form1
         ' 
         BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), Image)
         BackgroundImageLayout = ImageLayout.Stretch
         ClientSize = New Size(1009, 665)
+        Controls.Add(lblHarga)
         Controls.Add(btnSelesai)
         Controls.Add(btnLihatPendapatan)
         Controls.Add(PictureBox4)
@@ -368,6 +382,7 @@ Partial Class Form1
         Controls.Add(btnMasterLayanan)
         Controls.Add(dgvJoki)
         Name = "Form1"
+        StartPosition = FormStartPosition.CenterScreen
         Text = "Input Antrean Joki Genshin"
         CType(dgvJoki, ComponentModel.ISupportInitialize).EndInit()
         CType(ErrorProvider1, ComponentModel.ISupportInitialize).EndInit()
@@ -407,4 +422,5 @@ Partial Class Form1
     Friend WithEvents PictureBox4 As PictureBox
     Friend WithEvents btnSelesai As Button
     Friend WithEvents btnLihatPendapatan As Button
+    Friend WithEvents lblHarga As Label
 End Class

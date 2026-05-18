@@ -30,7 +30,6 @@ Partial Class Form1
         cmbLayanan = New ComboBox()
         cmbKesulitan = New ComboBox()
         dgvJoki = New DataGridView()
-        btnSimpan = New Button()
         btnUbah = New Button()
         btnHapus = New Button()
         btnBatal = New Button()
@@ -141,11 +140,12 @@ Partial Class Form1
         ' 
         ' dgvJoki
         ' 
+        dgvJoki.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells
         dgvJoki.BackgroundColor = Color.DarkRed
         dgvJoki.ColumnHeadersHeight = 34
         DataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle1.BackColor = SystemColors.Window
-        DataGridViewCellStyle1.Font = New Font("Segoe UI", 9F)
+        DataGridViewCellStyle1.Font = New Font("Segoe UI", 9.0F)
         DataGridViewCellStyle1.ForeColor = SystemColors.ControlText
         DataGridViewCellStyle1.SelectionBackColor = Color.Red
         DataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText
@@ -155,29 +155,18 @@ Partial Class Form1
         dgvJoki.Name = "dgvJoki"
         dgvJoki.ReadOnly = True
         dgvJoki.RowHeadersWidth = 62
+        dgvJoki.SelectionMode = DataGridViewSelectionMode.FullRowSelect
         dgvJoki.Size = New Size(671, 205)
         dgvJoki.TabIndex = 15
-        ' 
-        ' btnSimpan
-        ' 
-        btnSimpan.BackColor = Color.DarkRed
-        btnSimpan.Font = New Font("Microsoft Sans Serif", 9F)
-        btnSimpan.ForeColor = Color.White
-        btnSimpan.Location = New Point(20, 344)
-        btnSimpan.Name = "btnSimpan"
-        btnSimpan.Size = New Size(95, 46)
-        btnSimpan.TabIndex = 10
-        btnSimpan.Text = "Simpan"
-        btnSimpan.UseVisualStyleBackColor = False
         ' 
         ' btnUbah
         ' 
         btnUbah.BackColor = Color.DarkRed
-        btnUbah.Font = New Font("Microsoft Sans Serif", 9F)
+        btnUbah.Font = New Font("Microsoft Sans Serif", 9.0F)
         btnUbah.ForeColor = Color.White
-        btnUbah.Location = New Point(140, 344)
+        btnUbah.Location = New Point(20, 344)
         btnUbah.Name = "btnUbah"
-        btnUbah.Size = New Size(95, 46)
+        btnUbah.Size = New Size(155, 46)
         btnUbah.TabIndex = 11
         btnUbah.Text = "Ubah"
         btnUbah.UseVisualStyleBackColor = False
@@ -185,11 +174,11 @@ Partial Class Form1
         ' btnHapus
         ' 
         btnHapus.BackColor = Color.DarkRed
-        btnHapus.Font = New Font("Microsoft Sans Serif", 9F)
+        btnHapus.Font = New Font("Microsoft Sans Serif", 9.0F)
         btnHapus.ForeColor = Color.White
-        btnHapus.Location = New Point(258, 344)
+        btnHapus.Location = New Point(181, 344)
         btnHapus.Name = "btnHapus"
-        btnHapus.Size = New Size(95, 46)
+        btnHapus.Size = New Size(155, 46)
         btnHapus.TabIndex = 12
         btnHapus.Text = "Hapus"
         btnHapus.UseVisualStyleBackColor = False
@@ -197,11 +186,11 @@ Partial Class Form1
         ' btnBatal
         ' 
         btnBatal.BackColor = Color.DarkRed
-        btnBatal.Font = New Font("Microsoft Sans Serif", 9F)
+        btnBatal.Font = New Font("Microsoft Sans Serif", 9.0F)
         btnBatal.ForeColor = Color.White
-        btnBatal.Location = New Point(372, 344)
+        btnBatal.Location = New Point(342, 344)
         btnBatal.Name = "btnBatal"
-        btnBatal.Size = New Size(95, 46)
+        btnBatal.Size = New Size(155, 46)
         btnBatal.TabIndex = 13
         btnBatal.Text = "Batal"
         btnBatal.UseVisualStyleBackColor = False
@@ -209,7 +198,7 @@ Partial Class Form1
         ' btnMasterLayanan
         ' 
         btnMasterLayanan.BackColor = Color.DarkRed
-        btnMasterLayanan.Font = New Font("Microsoft Sans Serif", 9F)
+        btnMasterLayanan.Font = New Font("Microsoft Sans Serif", 9.0F)
         btnMasterLayanan.ForeColor = SystemColors.Control
         btnMasterLayanan.Location = New Point(683, 12)
         btnMasterLayanan.Name = "btnMasterLayanan"
@@ -232,7 +221,7 @@ Partial Class Form1
         ' Label1
         ' 
         Label1.BackColor = Color.Transparent
-        Label1.Font = New Font("Microsoft Sans Serif", 9F, FontStyle.Bold)
+        Label1.Font = New Font("Microsoft Sans Serif", 9.0F, FontStyle.Bold)
         Label1.ForeColor = Color.White
         Label1.Location = New Point(11, 232)
         Label1.Name = "Label1"
@@ -243,7 +232,7 @@ Partial Class Form1
         ' Label2
         ' 
         Label2.BackColor = Color.Transparent
-        Label2.Font = New Font("Microsoft Sans Serif", 9F, FontStyle.Bold)
+        Label2.Font = New Font("Microsoft Sans Serif", 9.0F, FontStyle.Bold)
         Label2.ForeColor = Color.White
         Label2.Location = New Point(11, 144)
         Label2.Name = "Label2"
@@ -261,7 +250,7 @@ Partial Class Form1
         ' LabelSulit
         ' 
         LabelSulit.BackColor = Color.Transparent
-        LabelSulit.Font = New Font("Microsoft Sans Serif", 9F, FontStyle.Bold)
+        LabelSulit.Font = New Font("Microsoft Sans Serif", 9.0F, FontStyle.Bold)
         LabelSulit.ForeColor = Color.White
         LabelSulit.Location = New Point(11, 300)
         LabelSulit.Name = "LabelSulit"
@@ -306,7 +295,7 @@ Partial Class Form1
         ' 
         PictureBox4.BackColor = Color.Transparent
         PictureBox4.Image = My.Resources.Resources.image_1775972612373
-        PictureBox4.Location = New Point(498, 186)
+        PictureBox4.Location = New Point(500, 186)
         PictureBox4.Name = "PictureBox4"
         PictureBox4.Size = New Size(193, 201)
         PictureBox4.SizeMode = PictureBoxSizeMode.Zoom
@@ -375,7 +364,6 @@ Partial Class Form1
         Controls.Add(cmbLayanan)
         Controls.Add(LabelSulit)
         Controls.Add(cmbKesulitan)
-        Controls.Add(btnSimpan)
         Controls.Add(btnUbah)
         Controls.Add(btnHapus)
         Controls.Add(btnBatal)
@@ -405,7 +393,6 @@ Partial Class Form1
     Friend WithEvents cmbLayanan As ComboBox
     Friend WithEvents cmbKesulitan As ComboBox
     Friend WithEvents dgvJoki As DataGridView
-    Friend WithEvents btnSimpan As Button
     Friend WithEvents btnUbah As Button
     Friend WithEvents btnHapus As Button
     Friend WithEvents btnBatal As Button

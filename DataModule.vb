@@ -84,6 +84,7 @@ Module DataModule
         Dim dt As New DataTable()
         Try
             Dim query As String = "SELECT j.uid, j.username, j.password, j.detail, j.kesulitan, " &
+                             "CASE j.kesulitan WHEN 1 THEN l.kesulitan1 WHEN 2 THEN l.kesulitan2 WHEN 3 THEN l.kesulitan3 ELSE '-' END AS 'Tingkat Kesulitan', " &
                              "l.nama_layanan AS 'Jenis Layanan', " &
                              "s.nama_status AS 'Status', " &
                              "j.total_harga " &
@@ -169,9 +170,11 @@ Module DataModule
     Public Function CariJoki(keyword As String) As DataTable
         Dim dt As New DataTable()
         Try
-            Dim query As String = "SELECT j.uid, j.username, j.password, j.detail, l.nama_layanan AS 'Jenis Layanan', j.kesulitan, j.total_harga " &
-                                 "FROM tb_joki j INNER JOIN tb_layanan l ON j.id_layanan = l.id_layanan " &
-                                 "WHERE j.uid LIKE @key OR j.username LIKE @key OR j.detail LIKE @key OR l.nama_layanan LIKE @key"
+            Dim query As String = "SELECT j.uid, j.username, j.password, j.detail, j.kesulitan, " &
+                                  "CASE j.kesulitan WHEN 1 THEN l.kesulitan1 WHEN 2 THEN l.kesulitan2 WHEN 3 THEN l.kesulitan3 ELSE '-' END AS 'Tingkat Kesulitan', " &
+                                  "l.nama_layanan AS 'Jenis Layanan', j.total_harga " &
+                                  "FROM tb_joki j INNER JOIN tb_layanan l ON j.id_layanan = l.id_layanan " &
+                                  "WHERE j.uid LIKE @key OR j.username LIKE @key OR j.detail LIKE @key OR l.nama_layanan LIKE @key"
             Using conn As MySqlConnection = GetConnection()
                 Using da As New MySqlDataAdapter(query, conn)
                     da.SelectCommand.Parameters.AddWithValue("@key", "%" & keyword & "%")
@@ -338,7 +341,9 @@ Module DataModule
         Dim dt As New DataTable()
         Try
             Dim query As String = "SELECT j.uid, j.id_transaksi, j.username, j.password, j.detail, " &
-                                  "l.nama_layanan AS 'Jenis Layanan', l.harga_dasar, j.kesulitan, j.tgl_order, " &
+                                  "l.nama_layanan AS 'Jenis Layanan', l.harga_dasar, j.kesulitan, " &
+                                  "CASE j.kesulitan WHEN 1 THEN l.kesulitan1 WHEN 2 THEN l.kesulitan2 WHEN 3 THEN l.kesulitan3 ELSE '-' END AS 'Tingkat Kesulitan', " &
+                                  "j.tgl_order, " &
                                   "m.nama_metode AS 'Metode Bayar', " &
                                   "s.nama_status AS 'Status', j.total_harga " &
                                   "FROM tb_joki j " &

@@ -3,6 +3,7 @@
 Public Class Form1
 
     Private dtLayanan As DataTable
+    Private IsFromDatabase As Boolean = False
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         TampilData()
@@ -12,6 +13,7 @@ Public Class Form1
 
     Sub TampilData()
         dgvJoki.DataSource = TampilJoki()
+        AturDGV()
     End Sub
 
     Sub IsiComboLayanan()
@@ -33,9 +35,22 @@ Public Class Form1
         txtUID.Enabled = True
         lblHarga.Visible = False
         ErrorProvider1.Clear()
+        IsFromDatabase = False
+    End Sub
+
+    Sub AturDGV()
+        If dgvJoki.Columns.Count > 0 Then
+            dgvJoki.Columns("uid").HeaderText = "UID Game"
+            dgvJoki.Columns("username").HeaderText = "Akun Game"
+            dgvJoki.Columns("password").HeaderText = "Password"
+            dgvJoki.Columns("detail").HeaderText = "Detail Target"
+            If dgvJoki.Columns.Contains("kesulitan") Then dgvJoki.Columns("kesulitan").Visible = False
+            dgvJoki.Columns("total_harga").HeaderText = "Total Tagihan"
+        End If
     End Sub
 
     Private Function HitungTotal() As Integer
+        If cmbLayanan.SelectedIndex = -1 Then Return 0
         Dim row As DataRowView = cmbLayanan.SelectedItem
         Dim idLay As String = row("id_layanan").ToString()
         Dim dtLay As DataTable = TampilLayanan()
@@ -82,24 +97,13 @@ Public Class Form1
         UpdateLabelHarga()
     End Sub
 
-    Private Sub btnSimpan_Click(sender As Object, e As EventArgs) Handles btnSimpan.Click
-        If Not ValidasiInputJoki(ErrorProvider1, txtUID, txtUsername, txtPassword, txtDetail, cmbLayanan) Then Exit Sub
 
-        If cmbKesulitan.SelectedIndex = -1 Then
-            MessageBox.Show("Pilih tingkat kesulitan!")
+    Private Sub btnUbah_Click(sender As Object, e As EventArgs) Handles btnUbah.Click
+        If Not IsFromDatabase Then
+            MessageBox.Show("Aksi ditolak! Pilih data dari tabel terlebih dahulu sebelum mengubah.", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning)
             Exit Sub
         End If
 
-        Dim total As Integer = HitungTotal()
-        Dim sulit As Integer = cmbKesulitan.SelectedIndex + 1
-        If SimpanJoki(txtUID.Text, txtUsername.Text, txtPassword.Text, txtDetail.Text, cmbLayanan.SelectedValue.ToString(), sulit, total) Then
-            MessageBox.Show("Berhasil simpan!")
-            TampilData()
-            Kosongkan()
-        End If
-    End Sub
-
-    Private Sub btnUbah_Click(sender As Object, e As EventArgs) Handles btnUbah.Click
         If txtUID.Text = "" Then
             MessageBox.Show("Pilih data di tabel dulu!")
             Exit Sub
@@ -110,25 +114,36 @@ Public Class Form1
             Exit Sub
         End If
 
-        Dim total As Integer = HitungTotal()
-        Dim sulit As Integer = cmbKesulitan.SelectedIndex + 1
-        If UbahJoki(txtUID.Text, txtUsername.Text, txtPassword.Text, txtDetail.Text, cmbLayanan.SelectedValue.ToString(), sulit, total) Then
-            MessageBox.Show("Data UID " & txtUID.Text & " berhasil diupdate!")
-            TampilData()
-            Kosongkan()
+        Dim konfirmasi = MessageBox.Show("Apakah Anda yakin ingin menyimpan perubahan pada pesanan dengan UID " & txtUID.Text & "?", "Konfirmasi Ubah", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
+
+        If konfirmasi = DialogResult.Yes Then
+            Dim total As Integer = HitungTotal()
+            Dim sulit As Integer = cmbKesulitan.SelectedIndex + 1
+            If UbahJoki(txtUID.Text, txtUsername.Text, txtPassword.Text, txtDetail.Text, cmbLayanan.SelectedValue.ToString(), sulit, total) Then
+                MessageBox.Show("Data UID " & txtUID.Text & " berhasil diupdate!", "Sukses", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                TampilData()
+                Kosongkan()
+            End If
         End If
     End Sub
 
     Private Sub btnHapus_Click(sender As Object, e As EventArgs) Handles btnHapus.Click
+        If Not IsFromDatabase Then
+            MessageBox.Show("Aksi ditolak! Pilih data dari tabel terlebih dahulu sebelum menghapus.", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+            Exit Sub
+        End If
+
         If txtUID.Text = "" Then
             MessageBox.Show("Pilih data di tabel dulu!")
             Exit Sub
         End If
 
-        Dim yakin = MessageBox.Show("Hapus UID " & txtUID.Text & "?", "Konfirmasi", MessageBoxButtons.YesNo)
-        If yakin = DialogResult.Yes Then
+
+        Dim konfirmasi = MessageBox.Show("PERINGATAN: Apakah Anda yakin ingin menghapus pesanan dengan UID " & txtUID.Text & " secara permanen?", "Konfirmasi Hapus", MessageBoxButtons.YesNo, MessageBoxIcon.Error)
+
+        If konfirmasi = DialogResult.Yes Then
             If HapusJoki(txtUID.Text) Then
-                MessageBox.Show("Data terhapus!")
+                MessageBox.Show("Data berhasil terhapus!", "Sukses", MessageBoxButtons.OK, MessageBoxIcon.Information)
                 TampilData()
                 Kosongkan()
             End If
@@ -145,7 +160,6 @@ Public Class Form1
             txtDetail.Text = row.Cells("detail").Value.ToString()
             cmbLayanan.Text = row.Cells("Jenis Layanan").Value.ToString()
 
-            ' Set kesulitan berdasarkan index (nilai DB 1/2/3 → index 0/1/2)
             Dim kesulitanVal As String = row.Cells("kesulitan").Value.ToString()
             Dim idx As Integer = 0
             If Integer.TryParse(kesulitanVal, idx) AndAlso idx >= 1 AndAlso idx <= 3 Then
@@ -153,11 +167,17 @@ Public Class Form1
                     cmbKesulitan.SelectedIndex = idx - 1
                 End If
             End If
+
+            IsFromDatabase = True
         End If
     End Sub
 
     Private Sub btnBatal_Click(sender As Object, e As EventArgs) Handles btnBatal.Click
-        Kosongkan()
+        Dim konfirmasi = MessageBox.Show("Apakah Anda yakin ingin membatalkan aksi dan mengosongkan form?", "Konfirmasi Batal", MessageBoxButtons.YesNo, MessageBoxIcon.Warning)
+
+        If konfirmasi = DialogResult.Yes Then
+            Kosongkan()
+        End If
     End Sub
 
     Private Sub txtSearch_TextChanged(sender As Object, e As EventArgs) Handles txtSearch.TextChanged
@@ -165,6 +185,7 @@ Public Class Form1
             TampilData()
         Else
             dgvJoki.DataSource = CariJoki(txtSearch.Text.Trim())
+            AturDGV()
         End If
     End Sub
 
@@ -179,10 +200,15 @@ Public Class Form1
     End Sub
 
     Private Sub btnSelesai_Click(sender As Object, e As EventArgs) Handles btnSelesai.Click
-        If txtUID.Text = "" Then Exit Sub
+        If Not IsFromDatabase OrElse txtUID.Text = "" Then
+            MessageBox.Show("Pilih data aktif dari tabel terlebih dahulu!", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+            Exit Sub
+        End If
+
         If UpdateStatusJoki(txtUID.Text, "3") Then
             MessageBox.Show("Status diupdate ke Selesai!")
             TampilData()
+            Kosongkan()
         End If
     End Sub
 

@@ -52,9 +52,9 @@ Partial Class Form3
         lblHarga.BackColor = Color.Transparent
         lblHarga.Font = New Font("Microsoft Sans Serif", 15.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         lblHarga.ForeColor = Color.Black
-        lblHarga.Location = New Point(14, 400)
+        lblHarga.Location = New Point(12, 300)
         lblHarga.Name = "lblHarga"
-        lblHarga.Size = New Size(531, 60)
+        lblHarga.Size = New Size(465, 45)
         lblHarga.TabIndex = 39
         lblHarga.Text = "PLACEHOLDER HARGA"
         lblHarga.TextAlign = ContentAlignment.MiddleCenter
@@ -65,18 +65,17 @@ Partial Class Form3
         Label2.BackColor = Color.Transparent
         Label2.Font = New Font("Microsoft Sans Serif", 9F, FontStyle.Bold)
         Label2.ForeColor = Color.Black
-        Label2.Location = New Point(11, 196)
+        Label2.Location = New Point(10, 147)
         Label2.Name = "Label2"
-        Label2.Size = New Size(194, 40)
+        Label2.Size = New Size(170, 30)
         Label2.TabIndex = 37
         Label2.Text = "Character/Map/Event"
         ' 
         ' txtDetail
         ' 
-        txtDetail.Location = New Point(304, 193)
-        txtDetail.Margin = New Padding(3, 4, 3, 4)
+        txtDetail.Location = New Point(266, 145)
         txtDetail.Name = "txtDetail"
-        txtDetail.Size = New Size(228, 27)
+        txtDetail.Size = New Size(200, 23)
         txtDetail.TabIndex = 38
         ' 
         ' Label1
@@ -84,9 +83,9 @@ Partial Class Form3
         Label1.BackColor = Color.Transparent
         Label1.Font = New Font("Microsoft Sans Serif", 9F, FontStyle.Bold)
         Label1.ForeColor = Color.Black
-        Label1.Location = New Point(11, 313)
+        Label1.Location = New Point(10, 235)
         Label1.Name = "Label1"
-        Label1.Size = New Size(210, 23)
+        Label1.Size = New Size(184, 17)
         Label1.TabIndex = 36
         Label1.Text = "Tingkat Kesulitan"
         ' 
@@ -95,18 +94,17 @@ Partial Class Form3
         LabelUID.BackColor = Color.Transparent
         LabelUID.Font = New Font("Microsoft Sans Serif", 9F, FontStyle.Bold)
         LabelUID.ForeColor = Color.Black
-        LabelUID.Location = New Point(14, 24)
+        LabelUID.Location = New Point(12, 18)
         LabelUID.Name = "LabelUID"
-        LabelUID.Size = New Size(114, 31)
+        LabelUID.Size = New Size(100, 23)
         LabelUID.TabIndex = 27
         LabelUID.Text = "UID Game"
         ' 
         ' txtUID
         ' 
-        txtUID.Location = New Point(243, 21)
-        txtUID.Margin = New Padding(3, 4, 3, 4)
+        txtUID.Location = New Point(213, 16)
         txtUID.Name = "txtUID"
-        txtUID.Size = New Size(289, 27)
+        txtUID.Size = New Size(253, 23)
         txtUID.TabIndex = 28
         ' 
         ' LabelUser
@@ -114,18 +112,17 @@ Partial Class Form3
         LabelUser.BackColor = Color.Transparent
         LabelUser.Font = New Font("Microsoft Sans Serif", 9F, FontStyle.Bold)
         LabelUser.ForeColor = Color.Black
-        LabelUser.Location = New Point(11, 88)
+        LabelUser.Location = New Point(10, 66)
         LabelUser.Name = "LabelUser"
-        LabelUser.Size = New Size(194, 47)
+        LabelUser.Size = New Size(170, 35)
         LabelUser.TabIndex = 29
         LabelUser.Text = "Username/Email"
         ' 
         ' txtUsername
         ' 
-        txtUsername.Location = New Point(243, 75)
-        txtUsername.Margin = New Padding(3, 4, 3, 4)
+        txtUsername.Location = New Point(213, 56)
         txtUsername.Name = "txtUsername"
-        txtUsername.Size = New Size(289, 27)
+        txtUsername.Size = New Size(253, 23)
         txtUsername.TabIndex = 30
         ' 
         ' LabelPass
@@ -133,18 +130,17 @@ Partial Class Form3
         LabelPass.BackColor = Color.Transparent
         LabelPass.Font = New Font("Microsoft Sans Serif", 9F, FontStyle.Bold)
         LabelPass.ForeColor = Color.Black
-        LabelPass.Location = New Point(11, 141)
+        LabelPass.Location = New Point(10, 106)
         LabelPass.Name = "LabelPass"
-        LabelPass.Size = New Size(114, 31)
+        LabelPass.Size = New Size(100, 23)
         LabelPass.TabIndex = 31
         LabelPass.Text = "Password"
         ' 
         ' txtPassword
         ' 
-        txtPassword.Location = New Point(243, 132)
-        txtPassword.Margin = New Padding(3, 4, 3, 4)
+        txtPassword.Location = New Point(213, 99)
         txtPassword.Name = "txtPassword"
-        txtPassword.Size = New Size(289, 27)
+        txtPassword.Size = New Size(253, 23)
         txtPassword.TabIndex = 32
         txtPassword.UseSystemPasswordChar = True
         ' 
@@ -153,29 +149,27 @@ Partial Class Form3
         LabelLayanan.BackColor = Color.Transparent
         LabelLayanan.Font = New Font("Microsoft Sans Serif", 9F, FontStyle.Bold)
         LabelLayanan.ForeColor = Color.Black
-        LabelLayanan.Location = New Point(11, 256)
+        LabelLayanan.Location = New Point(10, 192)
         LabelLayanan.Name = "LabelLayanan"
-        LabelLayanan.Size = New Size(179, 44)
+        LabelLayanan.Size = New Size(157, 33)
         LabelLayanan.TabIndex = 33
         LabelLayanan.Text = "Pilih Layanan"
         ' 
         ' cmbLayanan
         ' 
         cmbLayanan.DropDownStyle = ComboBoxStyle.DropDownList
-        cmbLayanan.Location = New Point(243, 253)
-        cmbLayanan.Margin = New Padding(3, 4, 3, 4)
+        cmbLayanan.Location = New Point(213, 190)
         cmbLayanan.Name = "cmbLayanan"
-        cmbLayanan.Size = New Size(289, 28)
+        cmbLayanan.Size = New Size(253, 23)
         cmbLayanan.TabIndex = 34
         ' 
         ' cmbKesulitan
         ' 
         cmbKesulitan.DropDownStyle = ComboBoxStyle.DropDownList
         cmbKesulitan.Items.AddRange(New Object() {"1", "2", "3"})
-        cmbKesulitan.Location = New Point(243, 311)
-        cmbKesulitan.Margin = New Padding(3, 4, 3, 4)
+        cmbKesulitan.Location = New Point(213, 233)
         cmbKesulitan.Name = "cmbKesulitan"
-        cmbKesulitan.Size = New Size(285, 28)
+        cmbKesulitan.Size = New Size(250, 23)
         cmbKesulitan.TabIndex = 35
         ' 
         ' btnPesan
@@ -183,10 +177,9 @@ Partial Class Form3
         btnPesan.BackColor = Color.DarkRed
         btnPesan.Font = New Font("Microsoft Sans Serif", 9F)
         btnPesan.ForeColor = Color.White
-        btnPesan.Location = New Point(7, 464)
-        btnPesan.Margin = New Padding(3, 4, 3, 4)
+        btnPesan.Location = New Point(6, 348)
         btnPesan.Name = "btnPesan"
-        btnPesan.Size = New Size(175, 61)
+        btnPesan.Size = New Size(153, 46)
         btnPesan.TabIndex = 40
         btnPesan.Text = "Pesan"
         btnPesan.UseVisualStyleBackColor = False
@@ -200,22 +193,23 @@ Partial Class Form3
         btnBatal.BackColor = Color.DarkRed
         btnBatal.Font = New Font("Microsoft Sans Serif", 9F)
         btnBatal.ForeColor = Color.White
-        btnBatal.Location = New Point(188, 464)
-        btnBatal.Margin = New Padding(3, 4, 3, 4)
+        btnBatal.Location = New Point(164, 348)
         btnBatal.Name = "btnBatal"
-        btnBatal.Size = New Size(180, 61)
+        btnBatal.Size = New Size(158, 46)
         btnBatal.TabIndex = 41
         btnBatal.Text = "Batal"
         btnBatal.UseVisualStyleBackColor = False
         ' 
         ' dgvJokiUser
         ' 
+        dgvJokiUser.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells
         dgvJokiUser.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        dgvJokiUser.Location = New Point(7, 533)
-        dgvJokiUser.Margin = New Padding(3, 4, 3, 4)
+        dgvJokiUser.Location = New Point(6, 400)
         dgvJokiUser.Name = "dgvJokiUser"
+        dgvJokiUser.ReadOnly = True
         dgvJokiUser.RowHeadersWidth = 51
-        dgvJokiUser.Size = New Size(531, 196)
+        dgvJokiUser.SelectionMode = DataGridViewSelectionMode.FullRowSelect
+        dgvJokiUser.Size = New Size(465, 147)
         dgvJokiUser.TabIndex = 42
         ' 
         ' btnCetakStruk
@@ -223,10 +217,9 @@ Partial Class Form3
         btnCetakStruk.BackColor = Color.DarkRed
         btnCetakStruk.Font = New Font("Microsoft Sans Serif", 9F)
         btnCetakStruk.ForeColor = Color.White
-        btnCetakStruk.Location = New Point(370, 464)
-        btnCetakStruk.Margin = New Padding(3, 4, 3, 4)
+        btnCetakStruk.Location = New Point(324, 348)
         btnCetakStruk.Name = "btnCetakStruk"
-        btnCetakStruk.Size = New Size(175, 61)
+        btnCetakStruk.Size = New Size(153, 46)
         btnCetakStruk.TabIndex = 43
         btnCetakStruk.Text = "Cetak"
         btnCetakStruk.UseVisualStyleBackColor = False
@@ -236,9 +229,9 @@ Partial Class Form3
         Label3.BackColor = Color.Transparent
         Label3.Font = New Font("Microsoft Sans Serif", 9F, FontStyle.Bold)
         Label3.ForeColor = Color.Black
-        Label3.Location = New Point(14, 372)
+        Label3.Location = New Point(12, 279)
         Label3.Name = "Label3"
-        Label3.Size = New Size(231, 44)
+        Label3.Size = New Size(202, 33)
         Label3.TabIndex = 44
         Label3.Text = "Metode Pembayaran"
         ' 
@@ -246,17 +239,16 @@ Partial Class Form3
         ' 
         cmbMetodeBayar.DropDownStyle = ComboBoxStyle.DropDownList
         cmbMetodeBayar.Items.AddRange(New Object() {"1", "2", "3"})
-        cmbMetodeBayar.Location = New Point(243, 368)
-        cmbMetodeBayar.Margin = New Padding(3, 4, 3, 4)
+        cmbMetodeBayar.Location = New Point(213, 276)
         cmbMetodeBayar.Name = "cmbMetodeBayar"
-        cmbMetodeBayar.Size = New Size(285, 28)
+        cmbMetodeBayar.Size = New Size(250, 23)
         cmbMetodeBayar.TabIndex = 45
         ' 
         ' Form3
         ' 
-        AutoScaleDimensions = New SizeF(8F, 20F)
+        AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
-        ClientSize = New Size(550, 742)
+        ClientSize = New Size(481, 556)
         Controls.Add(cmbMetodeBayar)
         Controls.Add(Label3)
         Controls.Add(btnCetakStruk)
@@ -276,7 +268,6 @@ Partial Class Form3
         Controls.Add(LabelLayanan)
         Controls.Add(cmbLayanan)
         Controls.Add(cmbKesulitan)
-        Margin = New Padding(3, 4, 3, 4)
         Name = "Form3"
         Text = "Form3"
         CType(ErrorProvider1, ComponentModel.ISupportInitialize).EndInit()

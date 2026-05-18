@@ -200,24 +200,26 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\HP\\.nuget\\packages\\": {}
+    "C:\\Users\\Rumia\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\PA_Sem4\\Pa_Vis\\PA_PEMVIS\\POSTTEST_6.vbproj",
+      "projectUniqueName": "C:\\Users\\Rumia\\Documents\\Folder Praktikum\\Projek Akhir\\pemvis\\POSTTEST_6.vbproj",
       "projectName": "POSTTEST_6",
-      "projectPath": "D:\\PA_Sem4\\Pa_Vis\\PA_PEMVIS\\POSTTEST_6.vbproj",
-      "packagesPath": "C:\\Users\\HP\\.nuget\\packages\\",
-      "outputPath": "D:\\PA_Sem4\\Pa_Vis\\PA_PEMVIS\\obj\\",
+      "projectPath": "C:\\Users\\Rumia\\Documents\\Folder Praktikum\\Projek Akhir\\pemvis\\POSTTEST_6.vbproj",
+      "packagesPath": "C:\\Users\\Rumia\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Rumia\\Documents\\Folder Praktikum\\Projek Akhir\\pemvis\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\HP\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\Rumia\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net10.0-windows"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {

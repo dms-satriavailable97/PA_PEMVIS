@@ -24,7 +24,7 @@ Public Class Form3
             dgvJokiUser.Columns("username").HeaderText = "Akun Game"
             dgvJokiUser.Columns("password").HeaderText = "Password"
             dgvJokiUser.Columns("detail").HeaderText = "Detail Target"
-            dgvJokiUser.Columns("kesulitan").HeaderText = "Index Sulit"
+            If dgvJokiUser.Columns.Contains("kesulitan") Then dgvJokiUser.Columns("kesulitan").Visible = False
             dgvJokiUser.Columns("Jenis Layanan").HeaderText = "Jenis Layanan"
             dgvJokiUser.Columns("Status").HeaderText = "Status Progres"
             dgvJokiUser.Columns("total_harga").HeaderText = "Tagihan"
@@ -41,11 +41,6 @@ Public Class Form3
 
             If dgvJokiUser.Columns.Contains("id_transaksi") Then dgvJokiUser.Columns("id_transaksi").Visible = False
             If dgvJokiUser.Columns.Contains("harga_dasar") Then dgvJokiUser.Columns("harga_dasar").Visible = False
-
-            dgvJokiUser.ReadOnly = True
-            dgvJokiUser.SelectionMode = DataGridViewSelectionMode.FullRowSelect
-            dgvJokiUser.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells
-            dgvJokiUser.ScrollBars = ScrollBars.Both
         End If
     End Sub
 
@@ -120,6 +115,7 @@ Public Class Form3
     End Sub
 
     Private Sub btnPesan_Click(sender As Object, e As EventArgs) Handles btnPesan.Click
+        ' 1. Validasi Input
         If Not ValidasiInputJoki(ErrorProvider1, txtUID, txtUsername, txtPassword, txtDetail, cmbLayanan) Then Exit Sub
 
         If cmbKesulitan.SelectedIndex = -1 Then
@@ -137,22 +133,30 @@ Public Class Form3
             Exit Sub
         End If
 
-        Dim uid As String = txtUID.Text.Trim()
-        Dim total As Integer = HitungTotal()
-        Dim sulit As Integer = cmbKesulitan.SelectedIndex + 1
-        Dim idLay As String = cmbLayanan.SelectedValue.ToString()
+        Dim konfirmasi = MessageBox.Show("Apakah Anda yakin data pesanan sudah benar dan ingin mengirimkannya?", "Konfirmasi Pesanan", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
+        If konfirmasi = DialogResult.Yes Then
+            Dim uid As String = txtUID.Text.Trim()
+            Dim total As Integer = HitungTotal()
+            Dim sulit As Integer = cmbKesulitan.SelectedIndex + 1
+            Dim idLay As String = cmbLayanan.SelectedValue.ToString()
 
-        Dim idMetodeDipilih As String = cmbMetodeBayar.SelectedValue.ToString()
-        Dim idTransaksiOtomatis As String = GenerateIDTransaksi()
-        If BuatPesananUser(uid, txtUsername.Text, txtPassword.Text, txtDetail.Text, idLay, sulit, total, DataModule.SessionUsername, idTransaksiOtomatis, idMetodeDipilih) Then
-            MessageBox.Show("Pesanan berhasil dikirim!", "Sukses", MessageBoxButtons.OK, MessageBoxIcon.Information)
-            Kosongkan()
-            TampilDataUser()
+            Dim idMetodeDipilih As String = cmbMetodeBayar.SelectedValue.ToString()
+            Dim idTransaksiOtomatis As String = GenerateIDTransaksi()
+
+            If BuatPesananUser(uid, txtUsername.Text, txtPassword.Text, txtDetail.Text, idLay, sulit, total, DataModule.SessionUsername, idTransaksiOtomatis, idMetodeDipilih) Then
+                MessageBox.Show("Pesanan berhasil dikirim!", "Sukses", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                Kosongkan()
+                TampilDataUser()
+            End If
         End If
     End Sub
 
     Private Sub btnBatal_Click(sender As Object, e As EventArgs) Handles btnBatal.Click
-        Kosongkan()
+        Dim konfirmasi = MessageBox.Show("Apakah Anda yakin ingin membatalkan dan mengosongkan seluruh isian form ini?", "Konfirmasi Batal", MessageBoxButtons.YesNo, MessageBoxIcon.Warning)
+
+        If konfirmasi = DialogResult.Yes Then
+            Kosongkan()
+        End If
     End Sub
 
     Private Sub txtUID_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtUID.KeyPress

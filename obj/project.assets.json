@@ -1,7 +1,7 @@
 {
-  "version": 4,
+  "version": 3,
   "targets": {
-    "net10.0-windows": {
+    "net10.0-windows7.0": {
       "Microsoft.Extensions.DependencyInjection.Abstractions/8.0.2": {
         "type": "package",
         "compile": {
@@ -195,24 +195,29 @@
     }
   },
   "projectFileDependencyGroups": {
-    "net10.0-windows": [
+    "net10.0-windows7.0": [
       "MySqlConnector >= 2.5.0"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Rumia\\.nuget\\packages\\": {}
+    "C:\\Users\\rizal\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Rumia\\Documents\\Folder Praktikum\\Projek Akhir\\pemvis\\POSTTEST_6.vbproj",
+      "projectUniqueName": "C:\\Users\\rizal\\OneDrive\\Dokumen\\Praktikum_Semester_4\\Pemrograman Visual\\PA_PEMVIS\\PA_PEMVIS\\POSTTEST_6.vbproj",
       "projectName": "POSTTEST_6",
-      "projectPath": "C:\\Users\\Rumia\\Documents\\Folder Praktikum\\Projek Akhir\\pemvis\\POSTTEST_6.vbproj",
-      "packagesPath": "C:\\Users\\Rumia\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Rumia\\Documents\\Folder Praktikum\\Projek Akhir\\pemvis\\obj\\",
+      "projectPath": "C:\\Users\\rizal\\OneDrive\\Dokumen\\Praktikum_Semester_4\\Pemrograman Visual\\PA_PEMVIS\\PA_PEMVIS\\POSTTEST_6.vbproj",
+      "packagesPath": "C:\\Users\\rizal\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\rizal\\OneDrive\\Dokumen\\Praktikum_Semester_4\\Pemrograman Visual\\PA_PEMVIS\\PA_PEMVIS\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "C:\\Users\\Rumia\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\rizal\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -220,11 +225,11 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
-        "net10.0-windows": {
-          "framework": "net10.0-windows7.0",
+        "net10.0-windows7.0": {
           "targetAlias": "net10.0-windows",
           "projectReferences": {}
         }
@@ -239,11 +244,10 @@
         "auditLevel": "low",
         "auditMode": "all"
       },
-      "SdkAnalysisLevel": "10.0.300"
+      "SdkAnalysisLevel": "10.0.100"
     },
     "frameworks": {
-      "net10.0-windows": {
-        "framework": "net10.0-windows7.0",
+      "net10.0-windows7.0": {
         "targetAlias": "net10.0-windows",
         "dependencies": {
           "MySqlConnector": {
@@ -270,7 +274,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.300/PortableRuntimeIdentifierGraph.json",
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.102/PortableRuntimeIdentifierGraph.json",
         "packagesToPrune": {
           "Microsoft.CSharp": "(,4.7.32767]",
           "Microsoft.VisualBasic": "(,10.4.32767]",

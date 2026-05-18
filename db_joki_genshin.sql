@@ -1,6 +1,3 @@
--- ============================================================
---  DATABASE: db_joki_genshin
--- ============================================================
 CREATE DATABASE `db_joki_genshin`;
 USE `db_joki_genshin`;
 
@@ -8,9 +5,6 @@ SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
 SET time_zone = "+00:00";
 
--- ------------------------------------------------------------
--- 1. STRUKTUR & DATA TABEL `tb_status`
--- ------------------------------------------------------------
 CREATE TABLE `tb_status` (
   `id_status` int(11) NOT NULL,
   `nama_status` varchar(30) NOT NULL,
@@ -22,9 +16,6 @@ INSERT INTO `tb_status` (`id_status`, `nama_status`) VALUES
 (2, 'Diproses'),
 (3, 'Selesai');
 
--- ------------------------------------------------------------
--- 2. STRUKTUR & DATA TABEL `tb_layanan`
--- ------------------------------------------------------------
 CREATE TABLE `tb_layanan` (
   `id_layanan` varchar(5) NOT NULL,
   `nama_layanan` varchar(50) NOT NULL,
@@ -40,9 +31,6 @@ INSERT INTO `tb_layanan` (`id_layanan`, `nama_layanan`, `harga_dasar`, `kesulita
 ('L02', 'Eksplor Map', 30000, '<20%', '20-60%', '60-100%'),
 ('L03', 'Joki Event', 25000, 'Short Event (10d)', 'Patch Event (30d)', 'Permanent Event');
 
--- ------------------------------------------------------------
--- 3. STRUKTUR & DATA TABEL `tb_metode`
--- ------------------------------------------------------------
 CREATE TABLE `tb_metode` (
   `id_metode` varchar(5) NOT NULL,
   `nama_metode` varchar(50) NOT NULL,
@@ -55,9 +43,6 @@ INSERT INTO `tb_metode` (`id_metode`, `nama_metode`) VALUES
 ('M03', 'E-Wallet (Dana/OVO/GoPay)'),
 ('M04', 'Cash / Tunai');
 
--- ------------------------------------------------------------
--- 4. STRUKTUR & DATA TABEL `tb_user`
--- ------------------------------------------------------------
 CREATE TABLE `tb_user` (
   `id_user` int(11) NOT NULL AUTO_INCREMENT,
   `username` varchar(50) NOT NULL,
@@ -71,9 +56,6 @@ INSERT INTO `tb_user` (`id_user`, `username`, `password`, `role`) VALUES
 (1, 'admin', 'admin123', 'admin'),
 (2, 'user1', 'user123', 'user');
 
--- ------------------------------------------------------------
--- 5. STRUKTUR TABEL `tb_joki` (DENGAN STRUKTUR TERBARU)
--- ------------------------------------------------------------
 CREATE TABLE `tb_joki` (
   `uid` varchar(15) NOT NULL,
   `username` varchar(50) NOT NULL,
@@ -93,9 +75,7 @@ CREATE TABLE `tb_joki` (
   KEY `fk_metode_joki` (`id_metode`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
--- ------------------------------------------------------------
--- 6. PENGATURAN KETIDAKLELUASAAN (FOREIGN KEY CONSTRAINTS)
--- ------------------------------------------------------------
+
 ALTER TABLE `tb_joki`
   ADD CONSTRAINT `fk_metode_joki` FOREIGN KEY (`id_metode`) REFERENCES `tb_metode` (`id_metode`) ON UPDATE CASCADE,
   ADD CONSTRAINT `tb_joki_ibfk_1` FOREIGN KEY (`id_layanan`) REFERENCES `tb_layanan` (`id_layanan`) ON UPDATE CASCADE ON DELETE RESTRICT,

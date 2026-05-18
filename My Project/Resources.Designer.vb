@@ -73,9 +73,99 @@ Namespace My.Resources
         '''<summary>
         '''  Looks up a localized resource of type System.Drawing.Bitmap.
         '''</summary>
+        Friend ReadOnly Property button_batal() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("button batal", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property button_cetak() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("button cetak", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property button_simpan() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("button simpan", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property genshin__daftar() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("genshin  daftar", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property genshin_degen() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("genshin degen", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
         Friend ReadOnly Property genshin_klee_yelling_512x512() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("genshin-klee-yelling-512x512", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property genshin_login() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("genshin login", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property genshin_login1() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("genshin login1", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property genshin_login2() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("genshin login2", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property genshin_login3() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("genshin login3", resourceCulture)
                 Return CType(obj,System.Drawing.Bitmap)
             End Get
         End Property

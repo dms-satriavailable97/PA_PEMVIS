@@ -59,11 +59,11 @@ Public Class FormLogin
         FormRegister.ShowDialog()
     End Sub
 
-    Private Sub lblTitle_Click(sender As Object, e As EventArgs) Handles lblTitle.Click
+    Private Sub lblTitle_Click(sender As Object, e As EventArgs)
 
     End Sub
 
-    Private Sub pnlMain_Paint(sender As Object, e As PaintEventArgs) Handles pnlMain.Paint
+    Private Sub pnlMain_Paint(sender As Object, e As PaintEventArgs)
 
     End Sub
 End Class

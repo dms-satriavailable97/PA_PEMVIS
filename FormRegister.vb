@@ -73,7 +73,11 @@ Public Class FormRegister
         End If
     End Sub
 
-    Private Sub pnlHeader_Paint(sender As Object, e As PaintEventArgs) Handles pnlHeader.Paint
+    Private Sub pnlHeader_Paint(sender As Object, e As PaintEventArgs)
+
+    End Sub
+
+    Private Sub txtKonfirmasi_TextChanged(sender As Object, e As EventArgs) Handles txtKonfirmasi.TextChanged
 
     End Sub
 End Class

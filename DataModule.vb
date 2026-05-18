@@ -306,16 +306,18 @@ Module DataModule
         End Try
         Return False
     End Function
-    Public Function BuatPesananUser(uid As String, user As String, pass As String, detail As String, id_lay As String, sulit As Integer, total As Integer, pemesan As String) As Boolean
+    Public Function BuatPesananUser(uid As String, user As String, pass As String, detail As String, id_lay As String, sulit As Integer, total As Integer, pemesan As String, idTransaksi As String, idMetode As String) As Boolean
         Try
-            Dim query As String = "INSERT INTO tb_joki (uid, username, password, detail, id_layanan, kesulitan, total_harga, id_status, username_pemesan) " &
-                                  "VALUES (@uid, @user, @pass, @detail, @id_lay, @sulit, @total, 1, @pemesan) " &
-                                  "ON DUPLICATE KEY UPDATE username=@user, password=@pass, detail=@detail, id_layanan=@id_lay, kesulitan=@sulit, total_harga=@total, id_status=1, username_pemesan=@pemesan, tgl_order=CURRENT_TIMESTAMP"
+            Dim query As String = "INSERT INTO tb_joki (uid, id_transaksi, id_metode, username, password, detail, id_layanan, kesulitan, total_harga, id_status, username_pemesan) " &
+                                  "VALUES (@uid, @id_transaksi, @id_metode, @user, @pass, @detail, @id_lay, @sulit, @total, 1, @pemesan) " &
+                                  "ON DUPLICATE KEY UPDATE id_transaksi=@id_transaksi, id_metode=@id_metode, username=@user, password=@pass, detail=@detail, id_layanan=@id_lay, kesulitan=@sulit, total_harga=@total, id_status=1, username_pemesan=@pemesan, tgl_order=CURRENT_TIMESTAMP"
 
             Using conn As MySqlConnection = GetConnection()
                 conn.Open()
                 Using cmd As New MySqlCommand(query, conn)
                     cmd.Parameters.AddWithValue("@uid", uid)
+                    cmd.Parameters.AddWithValue("@id_transaksi", idTransaksi)
+                    cmd.Parameters.AddWithValue("@id_metode", idMetode)
                     cmd.Parameters.AddWithValue("@user", user)
                     cmd.Parameters.AddWithValue("@pass", pass)
                     cmd.Parameters.AddWithValue("@detail", detail)
@@ -328,22 +330,24 @@ Module DataModule
             End Using
             Return True
         Catch ex As Exception
-            MessageBox.Show("Gagal mengirim pesanan: " & ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            MessageBox.Show("Gagal mengirim pesanan: " & ex.Message)
             Return False
         End Try
     End Function
     Public Function TampilJokiUser(pemesan As String) As DataTable
         Dim dt As New DataTable()
         Try
-            Dim query As String = "SELECT j.uid, j.username, j.password, j.detail, j.kesulitan, " &
-                                 "l.nama_layanan AS 'Jenis Layanan', " &
-                                 "s.nama_status AS 'Status', " &
-                                 "j.total_harga " &
-                                 "FROM tb_joki j " &
-                                 "INNER JOIN tb_layanan l ON j.id_layanan = l.id_layanan " &
-                                 "INNER JOIN tb_status s ON j.id_status = s.id_status " &
-                                 "WHERE j.username_pemesan = @pemesan " &
-                                 "ORDER BY j.tgl_order DESC" ' Menampilkan data terbaru paling atas
+            Dim query As String = "SELECT j.uid, j.id_transaksi, j.username, j.password, j.detail, " &
+                                  "l.nama_layanan AS 'Jenis Layanan', l.harga_dasar, j.kesulitan, j.tgl_order, " &
+                                  "m.nama_metode AS 'Metode Bayar', " &
+                                  "s.nama_status AS 'Status', j.total_harga " &
+                                  "FROM tb_joki j " &
+                                  "INNER JOIN tb_layanan l ON j.id_layanan = l.id_layanan " &
+                                  "INNER JOIN tb_status s ON j.id_status = s.id_status " &
+                                  "LEFT JOIN tb_metode m ON j.id_metode = m.id_metode " &
+                                  "WHERE j.username_pemesan = @pemesan " &
+                                  "ORDER BY j.tgl_order DESC"
+
             Using conn As MySqlConnection = GetConnection()
                 Using da As New MySqlDataAdapter(query, conn)
                     da.SelectCommand.Parameters.AddWithValue("@pemesan", pemesan)
@@ -352,6 +356,51 @@ Module DataModule
             End Using
         Catch ex As Exception
             MessageBox.Show("Gagal ambil data joki user: " & ex.Message)
+        End Try
+
+        Return dt
+    End Function
+
+    Public Function GenerateIDTransaksi() As String
+        Dim idBaru As String = ""
+        Dim tglHariIni As String = DateTime.Now.ToString("yyyyMMdd")
+        Dim prefix As String = "TRX-" & tglHariIni & "-"
+
+        Try
+            Dim query As String = "SELECT id_transaksi FROM tb_joki WHERE id_transaksi LIKE @prefix ORDER BY id_transaksi DESC LIMIT 1"
+            Using conn As MySqlConnection = GetConnection()
+                conn.Open()
+                Using cmd As New MySqlCommand(query, conn)
+                    cmd.Parameters.AddWithValue("@prefix", prefix & "%")
+                    Dim lastId As Object = cmd.ExecuteScalar()
+
+                    If lastId IsNot Nothing AndAlso lastId IsNot DBNull.Value Then
+                        Dim lastUrutan As Integer = Convert.ToInt32(lastId.ToString().Substring(13, 3))
+                        Dim urutanBaru As Integer = lastUrutan + 1
+                        idBaru = prefix & urutanBaru.ToString("D3")
+                    Else
+                        idBaru = prefix & "001"
+                    End If
+                End Using
+            End Using
+        Catch ex As Exception
+            idBaru = prefix & DateTime.Now.ToString("HHmmss")
+        End Try
+
+        Return idBaru
+    End Function
+
+    Public Function GetMetodeForCombo() As DataTable
+        Dim dt As New DataTable()
+        Try
+            Dim query As String = "SELECT id_metode, nama_metode FROM tb_metode"
+            Using conn As MySqlConnection = GetConnection()
+                Using da As New MySqlDataAdapter(query, conn)
+                    da.Fill(dt)
+                End Using
+            End Using
+        Catch ex As Exception
+            MessageBox.Show("Gagal memuat list metode pembayaran: " & ex.Message)
         End Try
         Return dt
     End Function

@@ -3,14 +3,16 @@
 Public Class Form3
 
     Private dtLayanan As DataTable
+    Private dtMetode As DataTable
 
     Private Sub Form3_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         IsiComboLayanan()
+        IsiComboMetode()
         TampilDataUser()
         Kosongkan()
     End Sub
 
-    ' --- MEMUAT RIWAYAT ORDER KHUSUS USER INI ---
+
     Sub TampilDataUser()
         dgvJokiUser.DataSource = TampilJokiUser(DataModule.SessionUsername)
         AturDGVUser()
@@ -27,9 +29,23 @@ Public Class Form3
             dgvJokiUser.Columns("Status").HeaderText = "Status Progres"
             dgvJokiUser.Columns("total_harga").HeaderText = "Tagihan"
 
+            If dgvJokiUser.Columns.Contains("metode_pembayaran") Then
+                dgvJokiUser.Columns("metode_pembayaran").HeaderText = "Metode Bayar"
+                dgvJokiUser.Columns("metode_pembayaran").Visible = True
+            End If
+
+            If dgvJokiUser.Columns.Contains("tgl_transaksi") Then
+                dgvJokiUser.Columns("tgl_transaksi").HeaderText = "Tanggal Transaksi"
+                dgvJokiUser.Columns("tgl_transaksi").Visible = True
+            End If
+
+            If dgvJokiUser.Columns.Contains("id_transaksi") Then dgvJokiUser.Columns("id_transaksi").Visible = False
+            If dgvJokiUser.Columns.Contains("harga_dasar") Then dgvJokiUser.Columns("harga_dasar").Visible = False
+
             dgvJokiUser.ReadOnly = True
             dgvJokiUser.SelectionMode = DataGridViewSelectionMode.FullRowSelect
-            dgvJokiUser.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill
+            dgvJokiUser.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells
+            dgvJokiUser.ScrollBars = ScrollBars.Both
         End If
     End Sub
 
@@ -52,6 +68,7 @@ Public Class Form3
         lblHarga.Visible = False
         ErrorProvider1.Clear()
         txtUID.Focus()
+        cmbMetodeBayar.SelectedIndex = -1
     End Sub
 
     Private Function HitungTotal() As Integer
@@ -110,20 +127,25 @@ Public Class Form3
             Exit Sub
         End If
 
-        ' --- 1. LOGIKA PEMBLOKIRAN (Berdasarkan Akun Aplikasi) ---
         If CekPesananAktifUser(DataModule.SessionUsername) Then
             MessageBox.Show("Akun Anda masih memiliki pesanan yang belum selesai (Pending)." & vbCrLf & "Mohon tunggu sampai pesanan sebelumnya diselesaikan oleh Admin sebelum membuat pesanan baru.", "Akses Ditolak", MessageBoxButtons.OK, MessageBoxIcon.Stop)
             Exit Sub
         End If
 
-        ' --- 2. KIRIM PESANAN BARU ---
+        If cmbMetodeBayar.SelectedIndex = -1 Then
+            MessageBox.Show("Pilih metode pembayaran terlebih dahulu!", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+            Exit Sub
+        End If
+
         Dim uid As String = txtUID.Text.Trim()
         Dim total As Integer = HitungTotal()
         Dim sulit As Integer = cmbKesulitan.SelectedIndex + 1
         Dim idLay As String = cmbLayanan.SelectedValue.ToString()
 
-        If BuatPesananUser(uid, txtUsername.Text, txtPassword.Text, txtDetail.Text, idLay, sulit, total, DataModule.SessionUsername) Then
-            MessageBox.Show("Pesanan berhasil dikirim ke Admin! Silakan tunggu konfirmasi selanjutnya.", "Sukses", MessageBoxButtons.OK, MessageBoxIcon.Information)
+        Dim idMetodeDipilih As String = cmbMetodeBayar.SelectedValue.ToString()
+        Dim idTransaksiOtomatis As String = GenerateIDTransaksi()
+        If BuatPesananUser(uid, txtUsername.Text, txtPassword.Text, txtDetail.Text, idLay, sulit, total, DataModule.SessionUsername, idTransaksiOtomatis, idMetodeDipilih) Then
+            MessageBox.Show("Pesanan berhasil dikirim!", "Sukses", MessageBoxButtons.OK, MessageBoxIcon.Information)
             Kosongkan()
             TampilDataUser()
         End If
@@ -140,4 +162,37 @@ Public Class Form3
     Private Sub Form3_FormClosed(sender As Object, e As FormClosedEventArgs) Handles MyBase.FormClosed
         FormLogin.Show()
     End Sub
+
+    Private Sub btnCetakStruk_Click(sender As Object, e As EventArgs) Handles btnCetakStruk.Click
+        If dgvJokiUser.SelectedRows.Count = 0 Then
+            MessageBox.Show("Silakan klik/pilih salah satu pesanan di tabel terlebih dahulu!", "Pilih Data", MessageBoxButtons.OK, MessageBoxIcon.Information)
+            Exit Sub
+        End If
+        Dim row As DataGridViewRow = dgvJokiUser.SelectedRows(0)
+
+        Dim dataCetak As New StrukModule.DataStruk() With {
+            .IdTransaksi = If(IsDBNull(row.Cells("id_transaksi").Value), "TRX-Menunggu", row.Cells("id_transaksi").Value.ToString()),
+            .Tanggal = If(IsDBNull(row.Cells("tgl_order").Value), DateTime.Now, Convert.ToDateTime(row.Cells("tgl_order").Value)),
+            .Kasir = "Sistem Otomatis",
+            .Pelanggan = DataModule.SessionUsername,
+            .MetodePembayaran = If(IsDBNull(row.Cells("Metode Bayar").Value), "Menunggu", row.Cells("Metode Bayar").Value.ToString()),
+            .NamaLayanan = row.Cells("Jenis Layanan").Value.ToString(),
+            .HargaDasar = Convert.ToInt32(row.Cells("harga_dasar").Value),
+            .TingkatKesulitan = Convert.ToInt32(row.Cells("kesulitan").Value),
+            .TotalHarga = Convert.ToInt32(row.Cells("total_harga").Value),
+            .JumlahBayar = Convert.ToInt32(row.Cells("total_harga").Value),
+            .Kembali = 0
+        }
+
+        StrukModule.CetakStrukPembelian(dataCetak)
+    End Sub
+
+    Sub IsiComboMetode()
+        dtMetode = DataModule.GetMetodeForCombo()
+        cmbMetodeBayar.DataSource = dtMetode
+        cmbMetodeBayar.DisplayMember = "nama_metode"
+        cmbMetodeBayar.ValueMember = "id_metode"
+        cmbMetodeBayar.SelectedIndex = -1
+    End Sub
+
 End Class

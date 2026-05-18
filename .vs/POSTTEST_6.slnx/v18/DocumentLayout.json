@@ -1,61 +1,65 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\Rumia\\Documents\\Folder Praktikum\\Projek Akhir\\pemvis\\",
+  "WorkspaceRootPath": "D:\\PA_Sem4\\Pa_Vis\\PA_PEMVIS\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{D70E978C-9D8E-8704-C08A-EC98CC2A6D99}|POSTTEST_6.vbproj|c:\\users\\rumia\\documents\\folder praktikum\\projek akhir\\pemvis\\form1.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
-      "RelativeMoniker": "D:0:0:{D70E978C-9D8E-8704-C08A-EC98CC2A6D99}|POSTTEST_6.vbproj|solutionrelative:form1.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D70E978C-9D8E-8704-C08A-EC98CC2A6D99}|POSTTEST_6.vbproj|c:\\users\\rumia\\documents\\folder praktikum\\projek akhir\\pemvis\\form3.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
-      "RelativeMoniker": "D:0:0:{D70E978C-9D8E-8704-C08A-EC98CC2A6D99}|POSTTEST_6.vbproj|solutionrelative:form3.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D70E978C-9D8E-8704-C08A-EC98CC2A6D99}|POSTTEST_6.vbproj|c:\\users\\rumia\\documents\\folder praktikum\\projek akhir\\pemvis\\form3.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
-      "RelativeMoniker": "D:0:0:{D70E978C-9D8E-8704-C08A-EC98CC2A6D99}|POSTTEST_6.vbproj|solutionrelative:form3.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D70E978C-9D8E-8704-C08A-EC98CC2A6D99}|POSTTEST_6.vbproj|c:\\users\\rumia\\documents\\folder praktikum\\projek akhir\\pemvis\\datamodule.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "AbsoluteMoniker": "D:0:0:{D70E978C-9D8E-8704-C08A-EC98CC2A6D99}|POSTTEST_6.vbproj|d:\\pa_sem4\\pa_vis\\pa_pemvis\\datamodule.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
       "RelativeMoniker": "D:0:0:{D70E978C-9D8E-8704-C08A-EC98CC2A6D99}|POSTTEST_6.vbproj|solutionrelative:datamodule.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D70E978C-9D8E-8704-C08A-EC98CC2A6D99}|POSTTEST_6.vbproj|c:\\users\\rumia\\documents\\folder praktikum\\projek akhir\\pemvis\\formregister.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
-      "RelativeMoniker": "D:0:0:{D70E978C-9D8E-8704-C08A-EC98CC2A6D99}|POSTTEST_6.vbproj|solutionrelative:formregister.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+      "AbsoluteMoniker": "D:0:0:{D70E978C-9D8E-8704-C08A-EC98CC2A6D99}|POSTTEST_6.vbproj|d:\\pa_sem4\\pa_vis\\pa_pemvis\\strukmodule.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{D70E978C-9D8E-8704-C08A-EC98CC2A6D99}|POSTTEST_6.vbproj|solutionrelative:strukmodule.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D70E978C-9D8E-8704-C08A-EC98CC2A6D99}|POSTTEST_6.vbproj|c:\\users\\rumia\\documents\\folder praktikum\\projek akhir\\pemvis\\formlogin.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
-      "RelativeMoniker": "D:0:0:{D70E978C-9D8E-8704-C08A-EC98CC2A6D99}|POSTTEST_6.vbproj|solutionrelative:formlogin.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+      "AbsoluteMoniker": "D:0:0:{D70E978C-9D8E-8704-C08A-EC98CC2A6D99}|POSTTEST_6.vbproj|d:\\pa_sem4\\pa_vis\\pa_pemvis\\form3.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{D70E978C-9D8E-8704-C08A-EC98CC2A6D99}|POSTTEST_6.vbproj|solutionrelative:form3.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D70E978C-9D8E-8704-C08A-EC98CC2A6D99}|POSTTEST_6.vbproj|c:\\users\\rumia\\documents\\folder praktikum\\projek akhir\\pemvis\\form1.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "AbsoluteMoniker": "D:0:0:{D70E978C-9D8E-8704-C08A-EC98CC2A6D99}|POSTTEST_6.vbproj|d:\\pa_sem4\\pa_vis\\pa_pemvis\\form3.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
+      "RelativeMoniker": "D:0:0:{D70E978C-9D8E-8704-C08A-EC98CC2A6D99}|POSTTEST_6.vbproj|solutionrelative:form3.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D70E978C-9D8E-8704-C08A-EC98CC2A6D99}|POSTTEST_6.vbproj|d:\\pa_sem4\\pa_vis\\pa_pemvis\\form1.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
       "RelativeMoniker": "D:0:0:{D70E978C-9D8E-8704-C08A-EC98CC2A6D99}|POSTTEST_6.vbproj|solutionrelative:form1.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D70E978C-9D8E-8704-C08A-EC98CC2A6D99}|POSTTEST_6.vbproj|c:\\users\\rumia\\documents\\folder praktikum\\projek akhir\\pemvis\\form1.designer.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
-      "RelativeMoniker": "D:0:0:{D70E978C-9D8E-8704-C08A-EC98CC2A6D99}|POSTTEST_6.vbproj|solutionrelative:form1.designer.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D70E978C-9D8E-8704-C08A-EC98CC2A6D99}|POSTTEST_6.vbproj|c:\\users\\rumia\\documents\\folder praktikum\\projek akhir\\pemvis\\form2.designer.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
-      "RelativeMoniker": "D:0:0:{D70E978C-9D8E-8704-C08A-EC98CC2A6D99}|POSTTEST_6.vbproj|solutionrelative:form2.designer.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D70E978C-9D8E-8704-C08A-EC98CC2A6D99}|POSTTEST_6.vbproj|c:\\users\\rumia\\documents\\folder praktikum\\projek akhir\\pemvis\\validationmodule.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
-      "RelativeMoniker": "D:0:0:{D70E978C-9D8E-8704-C08A-EC98CC2A6D99}|POSTTEST_6.vbproj|solutionrelative:validationmodule.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D70E978C-9D8E-8704-C08A-EC98CC2A6D99}|POSTTEST_6.vbproj|c:\\users\\rumia\\documents\\folder praktikum\\projek akhir\\pemvis\\formlogin.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
-      "RelativeMoniker": "D:0:0:{D70E978C-9D8E-8704-C08A-EC98CC2A6D99}|POSTTEST_6.vbproj|solutionrelative:formlogin.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D70E978C-9D8E-8704-C08A-EC98CC2A6D99}|POSTTEST_6.vbproj|c:\\users\\rumia\\documents\\folder praktikum\\projek akhir\\pemvis\\form2.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "AbsoluteMoniker": "D:0:0:{D70E978C-9D8E-8704-C08A-EC98CC2A6D99}|POSTTEST_6.vbproj|d:\\pa_sem4\\pa_vis\\pa_pemvis\\form2.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
       "RelativeMoniker": "D:0:0:{D70E978C-9D8E-8704-C08A-EC98CC2A6D99}|POSTTEST_6.vbproj|solutionrelative:form2.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D70E978C-9D8E-8704-C08A-EC98CC2A6D99}|POSTTEST_6.vbproj|c:\\users\\rumia\\documents\\folder praktikum\\projek akhir\\pemvis\\form2.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
+      "AbsoluteMoniker": "D:0:0:{D70E978C-9D8E-8704-C08A-EC98CC2A6D99}|POSTTEST_6.vbproj|d:\\pa_sem4\\pa_vis\\pa_pemvis\\form2.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
       "RelativeMoniker": "D:0:0:{D70E978C-9D8E-8704-C08A-EC98CC2A6D99}|POSTTEST_6.vbproj|solutionrelative:form2.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D70E978C-9D8E-8704-C08A-EC98CC2A6D99}|POSTTEST_6.vbproj|c:\\users\\rumia\\documents\\folder praktikum\\projek akhir\\pemvis\\formregister.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
+      "AbsoluteMoniker": "D:0:0:{D70E978C-9D8E-8704-C08A-EC98CC2A6D99}|POSTTEST_6.vbproj|d:\\pa_sem4\\pa_vis\\pa_pemvis\\form1.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
+      "RelativeMoniker": "D:0:0:{D70E978C-9D8E-8704-C08A-EC98CC2A6D99}|POSTTEST_6.vbproj|solutionrelative:form1.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D70E978C-9D8E-8704-C08A-EC98CC2A6D99}|POSTTEST_6.vbproj|d:\\pa_sem4\\pa_vis\\pa_pemvis\\form2.designer.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{D70E978C-9D8E-8704-C08A-EC98CC2A6D99}|POSTTEST_6.vbproj|solutionrelative:form2.designer.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D70E978C-9D8E-8704-C08A-EC98CC2A6D99}|POSTTEST_6.vbproj|d:\\pa_sem4\\pa_vis\\pa_pemvis\\validationmodule.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{D70E978C-9D8E-8704-C08A-EC98CC2A6D99}|POSTTEST_6.vbproj|solutionrelative:validationmodule.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D70E978C-9D8E-8704-C08A-EC98CC2A6D99}|POSTTEST_6.vbproj|d:\\pa_sem4\\pa_vis\\pa_pemvis\\formregister.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{D70E978C-9D8E-8704-C08A-EC98CC2A6D99}|POSTTEST_6.vbproj|solutionrelative:formregister.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D70E978C-9D8E-8704-C08A-EC98CC2A6D99}|POSTTEST_6.vbproj|d:\\pa_sem4\\pa_vis\\pa_pemvis\\formlogin.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{D70E978C-9D8E-8704-C08A-EC98CC2A6D99}|POSTTEST_6.vbproj|solutionrelative:formlogin.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D70E978C-9D8E-8704-C08A-EC98CC2A6D99}|POSTTEST_6.vbproj|d:\\pa_sem4\\pa_vis\\pa_pemvis\\form1.designer.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{D70E978C-9D8E-8704-C08A-EC98CC2A6D99}|POSTTEST_6.vbproj|solutionrelative:form1.designer.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D70E978C-9D8E-8704-C08A-EC98CC2A6D99}|POSTTEST_6.vbproj|d:\\pa_sem4\\pa_vis\\pa_pemvis\\formlogin.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
+      "RelativeMoniker": "D:0:0:{D70E978C-9D8E-8704-C08A-EC98CC2A6D99}|POSTTEST_6.vbproj|solutionrelative:formlogin.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D70E978C-9D8E-8704-C08A-EC98CC2A6D99}|POSTTEST_6.vbproj|d:\\pa_sem4\\pa_vis\\pa_pemvis\\formregister.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
       "RelativeMoniker": "D:0:0:{D70E978C-9D8E-8704-C08A-EC98CC2A6D99}|POSTTEST_6.vbproj|solutionrelative:formregister.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
     }
   ],
@@ -66,84 +70,146 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 12,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Form1.vb [Design]",
+              "DocumentMoniker": "D:\\PA_Sem4\\Pa_Vis\\PA_PEMVIS\\Form1.vb",
+              "RelativeDocumentMoniker": "Form1.vb",
+              "ToolTip": "D:\\PA_Sem4\\Pa_Vis\\PA_PEMVIS\\Form1.vb [Design]",
+              "RelativeToolTip": "Form1.vb [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2026-05-15T22:28:14.726Z",
+              "IsPinned": true,
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Form3.vb [Design]",
+              "DocumentMoniker": "D:\\PA_Sem4\\Pa_Vis\\PA_PEMVIS\\Form3.vb",
+              "RelativeDocumentMoniker": "Form3.vb",
+              "ToolTip": "D:\\PA_Sem4\\Pa_Vis\\PA_PEMVIS\\Form3.vb [Design]",
+              "RelativeToolTip": "Form3.vb [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2026-05-17T12:51:00.383Z",
+              "IsPinned": true,
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Form2.vb [Design]",
+              "DocumentMoniker": "D:\\PA_Sem4\\Pa_Vis\\PA_PEMVIS\\Form2.vb",
+              "RelativeDocumentMoniker": "Form2.vb",
+              "ToolTip": "D:\\PA_Sem4\\Pa_Vis\\PA_PEMVIS\\Form2.vb [Design]",
+              "RelativeToolTip": "Form2.vb [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2026-04-20T13:25:52.608Z",
+              "IsPinned": true,
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "FormLogin.vb [Design]",
+              "DocumentMoniker": "D:\\PA_Sem4\\Pa_Vis\\PA_PEMVIS\\FormLogin.vb",
+              "RelativeDocumentMoniker": "FormLogin.vb",
+              "ToolTip": "D:\\PA_Sem4\\Pa_Vis\\PA_PEMVIS\\FormLogin.vb [Design]",
+              "RelativeToolTip": "FormLogin.vb [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2026-05-15T10:51:00.121Z",
+              "IsPinned": true,
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "FormRegister.vb [Design]",
+              "DocumentMoniker": "D:\\PA_Sem4\\Pa_Vis\\PA_PEMVIS\\FormRegister.vb",
+              "RelativeDocumentMoniker": "FormRegister.vb",
+              "ToolTip": "D:\\PA_Sem4\\Pa_Vis\\PA_PEMVIS\\FormRegister.vb [Design]",
+              "RelativeToolTip": "FormRegister.vb [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2026-05-15T10:52:03.632Z",
+              "IsPinned": true,
+              "EditorCaption": " [Design]"
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
             },
             {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Form1.vb [Design]",
-              "DocumentMoniker": "C:\\Users\\Rumia\\Documents\\Folder Praktikum\\Projek Akhir\\pemvis\\Form1.vb",
-              "RelativeDocumentMoniker": "Form1.vb",
-              "ToolTip": "C:\\Users\\Rumia\\Documents\\Folder Praktikum\\Projek Akhir\\pemvis\\Form1.vb [Design]",
-              "RelativeToolTip": "Form1.vb [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2026-05-15T22:28:14.726Z",
-              "EditorCaption": " [Design]"
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "StrukModule.vb",
+              "DocumentMoniker": "D:\\PA_Sem4\\Pa_Vis\\PA_PEMVIS\\StrukModule.vb",
+              "RelativeDocumentMoniker": "StrukModule.vb",
+              "ToolTip": "D:\\PA_Sem4\\Pa_Vis\\PA_PEMVIS\\StrukModule.vb",
+              "RelativeToolTip": "StrukModule.vb",
+              "ViewState": "AgIAAHAAAAAAAAAAAAAqwD8AAABYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2026-05-18T07:35:50.509Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "Form3.vb",
-              "DocumentMoniker": "C:\\Users\\Rumia\\Documents\\Folder Praktikum\\Projek Akhir\\pemvis\\Form3.vb",
+              "DocumentMoniker": "D:\\PA_Sem4\\Pa_Vis\\PA_PEMVIS\\Form3.vb",
               "RelativeDocumentMoniker": "Form3.vb",
-              "ToolTip": "C:\\Users\\Rumia\\Documents\\Folder Praktikum\\Projek Akhir\\pemvis\\Form3.vb",
+              "ToolTip": "D:\\PA_Sem4\\Pa_Vis\\PA_PEMVIS\\Form3.vb",
               "RelativeToolTip": "Form3.vb",
-              "ViewState": "AgIAAGoAAAAAAAAAAAAAwHIAAABZAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAC4AAABWAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
               "WhenOpened": "2026-05-17T12:56:46.549Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Form3.vb [Design]",
-              "DocumentMoniker": "C:\\Users\\Rumia\\Documents\\Folder Praktikum\\Projek Akhir\\pemvis\\Form3.vb",
-              "RelativeDocumentMoniker": "Form3.vb",
-              "ToolTip": "C:\\Users\\Rumia\\Documents\\Folder Praktikum\\Projek Akhir\\pemvis\\Form3.vb [Design]",
-              "RelativeToolTip": "Form3.vb [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2026-05-17T12:51:00.383Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 5,
               "Title": "Form2.vb",
-              "DocumentMoniker": "C:\\Users\\Rumia\\Documents\\Folder Praktikum\\Projek Akhir\\pemvis\\Form2.vb",
+              "DocumentMoniker": "D:\\PA_Sem4\\Pa_Vis\\PA_PEMVIS\\Form2.vb",
               "RelativeDocumentMoniker": "Form2.vb",
-              "ToolTip": "C:\\Users\\Rumia\\Documents\\Folder Praktikum\\Projek Akhir\\pemvis\\Form2.vb",
+              "ToolTip": "D:\\PA_Sem4\\Pa_Vis\\PA_PEMVIS\\Form2.vb",
               "RelativeToolTip": "Form2.vb",
-              "ViewState": "AgIAAB4AAAAAAAAAAAAAwCoAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAEQAAAAAAAAAAAAswFYAAAAOAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
               "WhenOpened": "2026-04-18T16:56:24.145Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 4,
               "Title": "Form1.vb",
-              "DocumentMoniker": "C:\\Users\\Rumia\\Documents\\Folder Praktikum\\Projek Akhir\\pemvis\\Form1.vb",
+              "DocumentMoniker": "D:\\PA_Sem4\\Pa_Vis\\PA_PEMVIS\\Form1.vb",
               "RelativeDocumentMoniker": "Form1.vb",
-              "ToolTip": "C:\\Users\\Rumia\\Documents\\Folder Praktikum\\Projek Akhir\\pemvis\\Form1.vb",
+              "ToolTip": "D:\\PA_Sem4\\Pa_Vis\\PA_PEMVIS\\Form1.vb",
               "RelativeToolTip": "Form1.vb",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAALAAAAAAAAAA==",
+              "ViewState": "AgIAAKsAAAAAAAAAAAAuwLoAAAALAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
               "WhenOpened": "2026-04-18T16:59:45.883Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 0,
               "Title": "DataModule.vb",
-              "DocumentMoniker": "C:\\Users\\Rumia\\Documents\\Folder Praktikum\\Projek Akhir\\pemvis\\DataModule.vb",
+              "DocumentMoniker": "D:\\PA_Sem4\\Pa_Vis\\PA_PEMVIS\\DataModule.vb",
               "RelativeDocumentMoniker": "DataModule.vb",
-              "ToolTip": "C:\\Users\\Rumia\\Documents\\Folder Praktikum\\Projek Akhir\\pemvis\\DataModule.vb",
+              "ToolTip": "D:\\PA_Sem4\\Pa_Vis\\PA_PEMVIS\\DataModule.vb",
               "RelativeToolTip": "DataModule.vb",
-              "ViewState": "AgIAACMBAAAAAAAAAAAuwCwBAAAkAAAAAAAAAA==",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAYwCgAAAAQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
               "WhenOpened": "2026-04-18T16:50:03.006Z",
               "EditorCaption": ""
@@ -152,9 +218,9 @@
               "$type": "Document",
               "DocumentIndex": 8,
               "Title": "Form2.Designer.vb",
-              "DocumentMoniker": "C:\\Users\\Rumia\\Documents\\Folder Praktikum\\Projek Akhir\\pemvis\\Form2.Designer.vb",
+              "DocumentMoniker": "D:\\PA_Sem4\\Pa_Vis\\PA_PEMVIS\\Form2.Designer.vb",
               "RelativeDocumentMoniker": "Form2.Designer.vb",
-              "ToolTip": "C:\\Users\\Rumia\\Documents\\Folder Praktikum\\Projek Akhir\\pemvis\\Form2.Designer.vb",
+              "ToolTip": "D:\\PA_Sem4\\Pa_Vis\\PA_PEMVIS\\Form2.Designer.vb",
               "RelativeToolTip": "Form2.Designer.vb",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
@@ -163,36 +229,23 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 11,
               "Title": "FormLogin.vb",
-              "DocumentMoniker": "C:\\Users\\Rumia\\Documents\\Folder Praktikum\\Projek Akhir\\pemvis\\FormLogin.vb",
+              "DocumentMoniker": "D:\\PA_Sem4\\Pa_Vis\\PA_PEMVIS\\FormLogin.vb",
               "RelativeDocumentMoniker": "FormLogin.vb",
-              "ToolTip": "C:\\Users\\Rumia\\Documents\\Folder Praktikum\\Projek Akhir\\pemvis\\FormLogin.vb",
+              "ToolTip": "D:\\PA_Sem4\\Pa_Vis\\PA_PEMVIS\\FormLogin.vb",
               "RelativeToolTip": "FormLogin.vb",
               "ViewState": "AgIAABAAAAAAAAAAAAAuwBwAAAA1AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2026-05-15T10:49:30.735Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-15T10:49:30.735Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 12,
-              "Title": "Form2.vb [Design]",
-              "DocumentMoniker": "C:\\Users\\Rumia\\Documents\\Folder Praktikum\\Projek Akhir\\pemvis\\Form2.vb",
-              "RelativeDocumentMoniker": "Form2.vb",
-              "ToolTip": "C:\\Users\\Rumia\\Documents\\Folder Praktikum\\Projek Akhir\\pemvis\\Form2.vb [Design]",
-              "RelativeToolTip": "Form2.vb [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2026-04-20T13:25:52.608Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
               "Title": "Form1.Designer.vb",
-              "DocumentMoniker": "C:\\Users\\Rumia\\Documents\\Folder Praktikum\\Projek Akhir\\pemvis\\Form1.Designer.vb",
+              "DocumentMoniker": "D:\\PA_Sem4\\Pa_Vis\\PA_PEMVIS\\Form1.Designer.vb",
               "RelativeDocumentMoniker": "Form1.Designer.vb",
-              "ToolTip": "C:\\Users\\Rumia\\Documents\\Folder Praktikum\\Projek Akhir\\pemvis\\Form1.Designer.vb",
+              "ToolTip": "D:\\PA_Sem4\\Pa_Vis\\PA_PEMVIS\\Form1.Designer.vb",
               "RelativeToolTip": "Form1.Designer.vb",
               "ViewState": "AgIAAAUAAAAAAAAAAAD4vxIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
@@ -201,50 +254,25 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "FormRegister.vb [Design]",
-              "DocumentMoniker": "C:\\Users\\Rumia\\Documents\\Folder Praktikum\\Projek Akhir\\pemvis\\FormRegister.vb",
-              "RelativeDocumentMoniker": "FormRegister.vb",
-              "ToolTip": "C:\\Users\\Rumia\\Documents\\Folder Praktikum\\Projek Akhir\\pemvis\\FormRegister.vb [Design]",
-              "RelativeToolTip": "FormRegister.vb [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2026-05-15T10:52:03.632Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 10,
-              "Title": "FormLogin.vb [Design]",
-              "DocumentMoniker": "C:\\Users\\Rumia\\Documents\\Folder Praktikum\\Projek Akhir\\pemvis\\FormLogin.vb",
-              "RelativeDocumentMoniker": "FormLogin.vb",
-              "ToolTip": "C:\\Users\\Rumia\\Documents\\Folder Praktikum\\Projek Akhir\\pemvis\\FormLogin.vb [Design]",
-              "RelativeToolTip": "FormLogin.vb [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2026-05-15T10:51:00.121Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
               "Title": "FormRegister.vb",
-              "DocumentMoniker": "C:\\Users\\Rumia\\Documents\\Folder Praktikum\\Projek Akhir\\pemvis\\FormRegister.vb",
+              "DocumentMoniker": "D:\\PA_Sem4\\Pa_Vis\\PA_PEMVIS\\FormRegister.vb",
               "RelativeDocumentMoniker": "FormRegister.vb",
-              "ToolTip": "C:\\Users\\Rumia\\Documents\\Folder Praktikum\\Projek Akhir\\pemvis\\FormRegister.vb",
+              "ToolTip": "D:\\PA_Sem4\\Pa_Vis\\PA_PEMVIS\\FormRegister.vb",
               "RelativeToolTip": "FormRegister.vb",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAE8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2026-05-15T11:08:27.602Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-15T11:08:27.602Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 9,
               "Title": "ValidationModule.vb",
-              "DocumentMoniker": "C:\\Users\\Rumia\\Documents\\Folder Praktikum\\Projek Akhir\\pemvis\\ValidationModule.vb",
+              "DocumentMoniker": "D:\\PA_Sem4\\Pa_Vis\\PA_PEMVIS\\ValidationModule.vb",
               "RelativeDocumentMoniker": "ValidationModule.vb",
-              "ToolTip": "C:\\Users\\Rumia\\Documents\\Folder Praktikum\\Projek Akhir\\pemvis\\ValidationModule.vb",
+              "ToolTip": "D:\\PA_Sem4\\Pa_Vis\\PA_PEMVIS\\ValidationModule.vb",
               "RelativeToolTip": "ValidationModule.vb",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAcAAAAOAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAOAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
               "WhenOpened": "2026-04-18T16:50:49.172Z",
               "EditorCaption": ""

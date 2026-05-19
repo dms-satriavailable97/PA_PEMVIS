@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class Form3
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,7 +20,7 @@ Partial Class Form3
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         components = New ComponentModel.Container()
         Dim DataGridViewCellStyle1 As DataGridViewCellStyle = New DataGridViewCellStyle()
@@ -52,7 +52,7 @@ Partial Class Form3
         ' lblHarga
         ' 
         lblHarga.BackColor = Color.Transparent
-        lblHarga.Font = New Font("Microsoft Sans Serif", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        lblHarga.Font = New Font("Microsoft Sans Serif", 12.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         lblHarga.ForeColor = Color.Black
         lblHarga.Location = New Point(71, 528)
         lblHarga.Name = "lblHarga"
@@ -181,7 +181,7 @@ Partial Class Form3
         btnPesan.BackgroundImage = My.Resources.Resources.button_simpan
         btnPesan.BackgroundImageLayout = ImageLayout.Zoom
         btnPesan.FlatStyle = FlatStyle.Flat
-        btnPesan.Font = New Font("Microsoft Sans Serif", 9F)
+        btnPesan.Font = New Font("Microsoft Sans Serif", 9.0F)
         btnPesan.ForeColor = Color.White
         btnPesan.Location = New Point(472, 534)
         btnPesan.Name = "btnPesan"
@@ -199,7 +199,7 @@ Partial Class Form3
         btnBatal.BackgroundImage = My.Resources.Resources.button_batal
         btnBatal.BackgroundImageLayout = ImageLayout.Zoom
         btnBatal.FlatStyle = FlatStyle.Flat
-        btnBatal.Font = New Font("Microsoft Sans Serif", 9F)
+        btnBatal.Font = New Font("Microsoft Sans Serif", 9.0F)
         btnBatal.ForeColor = Color.Transparent
         btnBatal.Location = New Point(708, 534)
         btnBatal.Name = "btnBatal"
@@ -215,7 +215,7 @@ Partial Class Form3
         dgvJokiUser.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
         DataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle1.BackColor = SystemColors.Window
-        DataGridViewCellStyle1.Font = New Font("Segoe UI", 9F)
+        DataGridViewCellStyle1.Font = New Font("Segoe UI", 9.0F)
         DataGridViewCellStyle1.ForeColor = SystemColors.ControlText
         DataGridViewCellStyle1.SelectionBackColor = Color.FromArgb(CByte(98), CByte(82), CByte(178))
         DataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText
@@ -236,7 +236,7 @@ Partial Class Form3
         btnCetakStruk.BackgroundImage = My.Resources.Resources.button_cetak
         btnCetakStruk.BackgroundImageLayout = ImageLayout.Zoom
         btnCetakStruk.FlatStyle = FlatStyle.Flat
-        btnCetakStruk.Font = New Font("Microsoft Sans Serif", 9F)
+        btnCetakStruk.Font = New Font("Microsoft Sans Serif", 9.0F)
         btnCetakStruk.ForeColor = Color.Transparent
         btnCetakStruk.Location = New Point(590, 534)
         btnCetakStruk.Name = "btnCetakStruk"
@@ -267,7 +267,7 @@ Partial Class Form3
         ' Label4
         ' 
         Label4.BackColor = Color.Transparent
-        Label4.Font = New Font("Monotype Corsiva", 36F, FontStyle.Bold Or FontStyle.Italic, GraphicsUnit.Point, CByte(0))
+        Label4.Font = New Font("Monotype Corsiva", 36.0F, FontStyle.Bold Or FontStyle.Italic, GraphicsUnit.Point, CByte(0))
         Label4.ForeColor = Color.White
         Label4.Location = New Point(224, 166)
         Label4.Name = "Label4"
@@ -278,7 +278,7 @@ Partial Class Form3
         ' 
         ' Form3
         ' 
-        AutoScaleDimensions = New SizeF(7F, 15F)
+        AutoScaleDimensions = New SizeF(7.0F, 15.0F)
         AutoScaleMode = AutoScaleMode.Font
         BackgroundImage = My.Resources.Resources.genshin_degen
         BackgroundImageLayout = ImageLayout.Zoom

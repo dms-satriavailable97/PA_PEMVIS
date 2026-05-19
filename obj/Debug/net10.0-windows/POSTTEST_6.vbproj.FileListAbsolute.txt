@@ -75,33 +75,6 @@ C:\Users\Rumia\Documents\Folder Praktikum\Projek Akhir\pemvis\obj\Debug\net10.0-
 C:\Users\Rumia\Documents\Folder Praktikum\Projek Akhir\pemvis\obj\Debug\net10.0-windows\POSTTEST_6.genruntimeconfig.cache
 C:\Users\Rumia\Documents\Folder Praktikum\Projek Akhir\pemvis\obj\Debug\net10.0-windows\ref\POSTTEST_6.dll
 C:\Users\Rumia\Documents\Folder Praktikum\Projek Akhir\pemvis\obj\Debug\net10.0-windows\POSTTEST_6.Form3.resources
-D:\PA_Sem4\Pa_Vis\PA_PEMVIS\bin\Debug\net10.0-windows\POSTTEST_6.exe
-D:\PA_Sem4\Pa_Vis\PA_PEMVIS\bin\Debug\net10.0-windows\POSTTEST_6.deps.json
-D:\PA_Sem4\Pa_Vis\PA_PEMVIS\bin\Debug\net10.0-windows\POSTTEST_6.runtimeconfig.json
-D:\PA_Sem4\Pa_Vis\PA_PEMVIS\bin\Debug\net10.0-windows\POSTTEST_6.dll
-D:\PA_Sem4\Pa_Vis\PA_PEMVIS\bin\Debug\net10.0-windows\POSTTEST_6.pdb
-D:\PA_Sem4\Pa_Vis\PA_PEMVIS\bin\Debug\net10.0-windows\Microsoft.Extensions.DependencyInjection.Abstractions.dll
-D:\PA_Sem4\Pa_Vis\PA_PEMVIS\bin\Debug\net10.0-windows\Microsoft.Extensions.Logging.Abstractions.dll
-D:\PA_Sem4\Pa_Vis\PA_PEMVIS\bin\Debug\net10.0-windows\MySqlConnector.dll
-D:\PA_Sem4\Pa_Vis\PA_PEMVIS\obj\Debug\net10.0-windows\POSTTEST_6.vbproj.AssemblyReference.cache
-D:\PA_Sem4\Pa_Vis\PA_PEMVIS\obj\Debug\net10.0-windows\POSTTEST_6.Form1.resources
-D:\PA_Sem4\Pa_Vis\PA_PEMVIS\obj\Debug\net10.0-windows\POSTTEST_6.Form2.resources
-D:\PA_Sem4\Pa_Vis\PA_PEMVIS\obj\Debug\net10.0-windows\POSTTEST_6.Form3.resources
-D:\PA_Sem4\Pa_Vis\PA_PEMVIS\obj\Debug\net10.0-windows\POSTTEST_6.FormLogin.resources
-D:\PA_Sem4\Pa_Vis\PA_PEMVIS\obj\Debug\net10.0-windows\POSTTEST_6.FormRegister.resources
-D:\PA_Sem4\Pa_Vis\PA_PEMVIS\obj\Debug\net10.0-windows\POSTTEST_6.Resources.resources
-D:\PA_Sem4\Pa_Vis\PA_PEMVIS\obj\Debug\net10.0-windows\POSTTEST_6.vbproj.GenerateResource.cache
-D:\PA_Sem4\Pa_Vis\PA_PEMVIS\obj\Debug\net10.0-windows\POSTTEST_6.GeneratedMSBuildEditorConfig.editorconfig
-D:\PA_Sem4\Pa_Vis\PA_PEMVIS\obj\Debug\net10.0-windows\POSTTEST_6.AssemblyInfoInputs.cache
-D:\PA_Sem4\Pa_Vis\PA_PEMVIS\obj\Debug\net10.0-windows\POSTTEST_6.AssemblyInfo.vb
-D:\PA_Sem4\Pa_Vis\PA_PEMVIS\obj\Debug\net10.0-windows\POSTTEST_6.vbproj.CoreCompileInputs.cache
-D:\PA_Sem4\Pa_Vis\PA_PEMVIS\obj\Debug\net10.0-windows\POSTTEST_6.sourcelink.json
-D:\PA_Sem4\Pa_Vis\PA_PEMVIS\obj\Debug\net10.0-windows\POSTTEST_6.vbproj.Up2Date
-D:\PA_Sem4\Pa_Vis\PA_PEMVIS\obj\Debug\net10.0-windows\POSTTEST_6.dll
-D:\PA_Sem4\Pa_Vis\PA_PEMVIS\obj\Debug\net10.0-windows\refint\POSTTEST_6.dll
-D:\PA_Sem4\Pa_Vis\PA_PEMVIS\obj\Debug\net10.0-windows\POSTTEST_6.pdb
-D:\PA_Sem4\Pa_Vis\PA_PEMVIS\obj\Debug\net10.0-windows\POSTTEST_6.genruntimeconfig.cache
-D:\PA_Sem4\Pa_Vis\PA_PEMVIS\obj\Debug\net10.0-windows\ref\POSTTEST_6.dll
 C:\Users\rizal\OneDrive\Dokumen\Praktikum_Semester_4\Pemrograman Visual\PA_PEMVIS\PA_PEMVIS\bin\Debug\net10.0-windows\POSTTEST_6.exe
 C:\Users\rizal\OneDrive\Dokumen\Praktikum_Semester_4\Pemrograman Visual\PA_PEMVIS\PA_PEMVIS\bin\Debug\net10.0-windows\POSTTEST_6.deps.json
 C:\Users\rizal\OneDrive\Dokumen\Praktikum_Semester_4\Pemrograman Visual\PA_PEMVIS\PA_PEMVIS\bin\Debug\net10.0-windows\POSTTEST_6.runtimeconfig.json
@@ -129,3 +102,31 @@ C:\Users\rizal\OneDrive\Dokumen\Praktikum_Semester_4\Pemrograman Visual\PA_PEMVI
 C:\Users\rizal\OneDrive\Dokumen\Praktikum_Semester_4\Pemrograman Visual\PA_PEMVIS\PA_PEMVIS\obj\Debug\net10.0-windows\POSTTEST_6.pdb
 C:\Users\rizal\OneDrive\Dokumen\Praktikum_Semester_4\Pemrograman Visual\PA_PEMVIS\PA_PEMVIS\obj\Debug\net10.0-windows\POSTTEST_6.genruntimeconfig.cache
 C:\Users\rizal\OneDrive\Dokumen\Praktikum_Semester_4\Pemrograman Visual\PA_PEMVIS\PA_PEMVIS\obj\Debug\net10.0-windows\ref\POSTTEST_6.dll
+D:\PA_Sem4\Pa_Vis\PA_PEMVIS\bin\Debug\net10.0-windows\POSTTEST_6.exe
+D:\PA_Sem4\Pa_Vis\PA_PEMVIS\bin\Debug\net10.0-windows\POSTTEST_6.deps.json
+D:\PA_Sem4\Pa_Vis\PA_PEMVIS\bin\Debug\net10.0-windows\POSTTEST_6.runtimeconfig.json
+D:\PA_Sem4\Pa_Vis\PA_PEMVIS\bin\Debug\net10.0-windows\POSTTEST_6.dll
+D:\PA_Sem4\Pa_Vis\PA_PEMVIS\bin\Debug\net10.0-windows\POSTTEST_6.pdb
+D:\PA_Sem4\Pa_Vis\PA_PEMVIS\bin\Debug\net10.0-windows\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+D:\PA_Sem4\Pa_Vis\PA_PEMVIS\bin\Debug\net10.0-windows\Microsoft.Extensions.Logging.Abstractions.dll
+D:\PA_Sem4\Pa_Vis\PA_PEMVIS\bin\Debug\net10.0-windows\MySqlConnector.dll
+D:\PA_Sem4\Pa_Vis\PA_PEMVIS\obj\Debug\net10.0-windows\POSTTEST_6.vbproj.AssemblyReference.cache
+D:\PA_Sem4\Pa_Vis\PA_PEMVIS\obj\Debug\net10.0-windows\POSTTEST_6.Form1.resources
+D:\PA_Sem4\Pa_Vis\PA_PEMVIS\obj\Debug\net10.0-windows\POSTTEST_6.Form2.resources
+D:\PA_Sem4\Pa_Vis\PA_PEMVIS\obj\Debug\net10.0-windows\POSTTEST_6.Form3.resources
+D:\PA_Sem4\Pa_Vis\PA_PEMVIS\obj\Debug\net10.0-windows\POSTTEST_6.FormLogin.resources
+D:\PA_Sem4\Pa_Vis\PA_PEMVIS\obj\Debug\net10.0-windows\POSTTEST_6.FormPembayaran.resources
+D:\PA_Sem4\Pa_Vis\PA_PEMVIS\obj\Debug\net10.0-windows\POSTTEST_6.FormRegister.resources
+D:\PA_Sem4\Pa_Vis\PA_PEMVIS\obj\Debug\net10.0-windows\POSTTEST_6.Resources.resources
+D:\PA_Sem4\Pa_Vis\PA_PEMVIS\obj\Debug\net10.0-windows\POSTTEST_6.vbproj.GenerateResource.cache
+D:\PA_Sem4\Pa_Vis\PA_PEMVIS\obj\Debug\net10.0-windows\POSTTEST_6.GeneratedMSBuildEditorConfig.editorconfig
+D:\PA_Sem4\Pa_Vis\PA_PEMVIS\obj\Debug\net10.0-windows\POSTTEST_6.AssemblyInfoInputs.cache
+D:\PA_Sem4\Pa_Vis\PA_PEMVIS\obj\Debug\net10.0-windows\POSTTEST_6.AssemblyInfo.vb
+D:\PA_Sem4\Pa_Vis\PA_PEMVIS\obj\Debug\net10.0-windows\POSTTEST_6.vbproj.CoreCompileInputs.cache
+D:\PA_Sem4\Pa_Vis\PA_PEMVIS\obj\Debug\net10.0-windows\POSTTEST_6.sourcelink.json
+D:\PA_Sem4\Pa_Vis\PA_PEMVIS\obj\Debug\net10.0-windows\POSTTEST_6.vbproj.Up2Date
+D:\PA_Sem4\Pa_Vis\PA_PEMVIS\obj\Debug\net10.0-windows\POSTTEST_6.dll
+D:\PA_Sem4\Pa_Vis\PA_PEMVIS\obj\Debug\net10.0-windows\refint\POSTTEST_6.dll
+D:\PA_Sem4\Pa_Vis\PA_PEMVIS\obj\Debug\net10.0-windows\POSTTEST_6.pdb
+D:\PA_Sem4\Pa_Vis\PA_PEMVIS\obj\Debug\net10.0-windows\POSTTEST_6.genruntimeconfig.cache
+D:\PA_Sem4\Pa_Vis\PA_PEMVIS\obj\Debug\net10.0-windows\ref\POSTTEST_6.dll

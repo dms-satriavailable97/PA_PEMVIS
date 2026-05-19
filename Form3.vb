@@ -132,20 +132,31 @@ Public Class Form3
             Exit Sub
         End If
 
-        Dim konfirmasi = MessageBox.Show("Apakah Anda yakin data pesanan sudah benar dan ingin mengirimkannya?", "Konfirmasi Pesanan", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
+        Dim konfirmasi = MessageBox.Show("Apakah Anda yakin data pesanan sudah benar dan ingin melanjutkan ke pembayaran?", "Konfirmasi Pesanan", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
+
         If konfirmasi = DialogResult.Yes Then
-            Dim uid As String = txtUID.Text.Trim()
             Dim total As Integer = HitungTotal()
-            Dim sulit As Integer = cmbKesulitan.SelectedIndex + 1
-            Dim idLay As String = cmbLayanan.SelectedValue.ToString()
-
+            Dim namaMetode As String = cmbMetodeBayar.Text
             Dim idMetodeDipilih As String = cmbMetodeBayar.SelectedValue.ToString()
-            Dim idTransaksiOtomatis As String = GenerateIDTransaksi()
 
-            If BuatPesananUser(uid, txtUsername.Text, txtPassword.Text, txtDetail.Text, idLay, sulit, total, DataModule.SessionUsername, idTransaksiOtomatis, idMetodeDipilih) Then
-                MessageBox.Show("Pesanan berhasil dikirim!", "Sukses", MessageBoxButtons.OK, MessageBoxIcon.Information)
-                Kosongkan()
-                TampilDataUser()
+            Dim strUID As String = txtUID.Text.Trim()
+            Dim strDetail As String = txtDetail.Text.Trim()
+            Dim strLayanan As String = cmbLayanan.Text
+            Dim strKesulitan As String = cmbKesulitan.Text
+            Dim frmBayar As New FormPembayaran()
+            frmBayar.SetupPembayaran(namaMetode, total, strUID, strDetail, strLayanan, strKesulitan)
+
+            If frmBayar.ShowDialog() = DialogResult.OK Then
+                Dim uid As String = txtUID.Text.Trim()
+                Dim sulit As Integer = cmbKesulitan.SelectedIndex + 1
+                Dim idLay As String = cmbLayanan.SelectedValue.ToString()
+                Dim idTransaksiOtomatis As String = GenerateIDTransaksi()
+
+                If BuatPesananUser(uid, txtUsername.Text, txtPassword.Text, txtDetail.Text, idLay, sulit, total, DataModule.SessionUsername, idTransaksiOtomatis, idMetodeDipilih) Then
+                    MessageBox.Show("Pesanan berhasil dikirim dan pembayaran sedang diproses!", "Sukses", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                    Kosongkan()
+                    TampilDataUser()
+                End If
             End If
         End If
     End Sub
@@ -171,7 +182,14 @@ Public Class Form3
             MessageBox.Show("Silakan klik/pilih salah satu pesanan di tabel terlebih dahulu!", "Pilih Data", MessageBoxButtons.OK, MessageBoxIcon.Information)
             Exit Sub
         End If
+
         Dim row As DataGridViewRow = dgvJokiUser.SelectedRows(0)
+        Dim statusPesanan As String = row.Cells("Status").Value.ToString().ToLower()
+
+        If statusPesanan.Contains("pending") OrElse statusPesanan.Contains("menunggu") Then
+            MessageBox.Show("Struk bukti transaksi belum bisa dicetak karena pesanan Anda masih berstatus '" & row.Cells("Status").Value.ToString() & "'." & vbCrLf & "Silakan tunggu hingga Admin menyetujui dan memproses pesanan Anda.", "Akses Ditolak", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+            Exit Sub
+        End If
 
         Dim dataCetak As New StrukModule.DataStruk() With {
             .IdTransaksi = If(IsDBNull(row.Cells("id_transaksi").Value), "TRX-Menunggu", row.Cells("id_transaksi").Value.ToString()),

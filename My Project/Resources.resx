@@ -133,17 +133,20 @@
   <data name="genshin degen" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\genshin degen.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="image_1775973106676" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\image_1775973106676.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="genshin login3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\genshin login3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="genshin login1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\genshin login1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="image_1775973102708" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\image_1775973102708.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="image_1775972619438" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\image_1775972619438.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="genshin login3" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\genshin login3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="QRPembayaran" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\QRPembayaran.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="image_1775972612373" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\image_1775972612373.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="image_1775972603020" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\image_1775972603020.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -151,14 +154,20 @@
   <data name="genshin login" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\genshin login.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="image_1775972612373" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\image_1775972612373.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Tes" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Tes.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="image_1775972619438" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\image_1775972619438.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="image_1775973106676" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\image_1775973106676.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="image_1775973102708" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\image_1775973102708.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="image_1775973137624" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\image_1775973137624.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="genshin  daftar" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\genshin  daftar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="image_1775972899532" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\image_1775972899532.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -172,7 +181,7 @@
   <data name="button simpan" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\button simpan.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="genshin  daftar" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\genshin  daftar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="ColumbinaMy" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ColumbinaMy.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

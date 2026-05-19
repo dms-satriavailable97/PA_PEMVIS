@@ -115,7 +115,6 @@ Public Class Form3
     End Sub
 
     Private Sub btnPesan_Click(sender As Object, e As EventArgs) Handles btnPesan.Click
-        ' 1. Validasi Input
         If Not ValidasiInputJoki(ErrorProvider1, txtUID, txtUsername, txtPassword, txtDetail, cmbLayanan) Then Exit Sub
 
         If cmbKesulitan.SelectedIndex = -1 Then
@@ -199,15 +198,4 @@ Public Class Form3
         cmbMetodeBayar.SelectedIndex = -1
     End Sub
 
-    Private Sub txtUsername_TextChanged(sender As Object, e As EventArgs) Handles txtUsername.TextChanged
-
-    End Sub
-
-    Private Sub lblHarga_Click(sender As Object, e As EventArgs) Handles lblHarga.Click
-
-    End Sub
-
-    Private Sub Label3_Click(sender As Object, e As EventArgs) Handles Label3.Click
-
-    End Sub
 End Class

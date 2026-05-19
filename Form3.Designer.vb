@@ -23,6 +23,7 @@ Partial Class Form3
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         components = New ComponentModel.Container()
+        Dim DataGridViewCellStyle1 As DataGridViewCellStyle = New DataGridViewCellStyle()
         lblHarga = New Label()
         Label2 = New Label()
         txtDetail = New TextBox()
@@ -212,6 +213,14 @@ Partial Class Form3
         dgvJokiUser.BackgroundColor = Color.White
         dgvJokiUser.BorderStyle = BorderStyle.Fixed3D
         dgvJokiUser.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        DataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle1.BackColor = SystemColors.Window
+        DataGridViewCellStyle1.Font = New Font("Segoe UI", 9F)
+        DataGridViewCellStyle1.ForeColor = SystemColors.ControlText
+        DataGridViewCellStyle1.SelectionBackColor = Color.FromArgb(CByte(98), CByte(82), CByte(178))
+        DataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText
+        DataGridViewCellStyle1.WrapMode = DataGridViewTriState.False
+        dgvJokiUser.DefaultCellStyle = DataGridViewCellStyle1
         dgvJokiUser.GridColor = Color.Black
         dgvJokiUser.Location = New Point(65, 577)
         dgvJokiUser.Name = "dgvJokiUser"
@@ -273,7 +282,7 @@ Partial Class Form3
         AutoScaleMode = AutoScaleMode.Font
         BackgroundImage = My.Resources.Resources.genshin_degen
         BackgroundImageLayout = ImageLayout.Zoom
-        ClientSize = New Size(1335, 777)
+        ClientSize = New Size(1335, 749)
         Controls.Add(Label4)
         Controls.Add(cmbMetodeBayar)
         Controls.Add(Label3)
@@ -297,7 +306,7 @@ Partial Class Form3
         DoubleBuffered = True
         Name = "Form3"
         StartPosition = FormStartPosition.CenterScreen
-        Text = "Form3"
+        Text = "Form Pesanan User"
         CType(ErrorProvider1, ComponentModel.ISupportInitialize).EndInit()
         CType(dgvJokiUser, ComponentModel.ISupportInitialize).EndInit()
         ResumeLayout(False)

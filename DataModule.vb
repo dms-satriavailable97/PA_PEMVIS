@@ -87,11 +87,11 @@ Module DataModule
                              "CASE j.kesulitan WHEN 1 THEN l.kesulitan1 WHEN 2 THEN l.kesulitan2 WHEN 3 THEN l.kesulitan3 ELSE '-' END AS 'Tingkat Kesulitan', " &
                              "l.nama_layanan AS 'Jenis Layanan', " &
                              "s.nama_status AS 'Status', " &
-                             "j.total_harga " &
+                             "j.total_harga, j.tgl_order " &
                              "FROM tb_joki j " &
                              "INNER JOIN tb_layanan l ON j.id_layanan = l.id_layanan " &
                              "INNER JOIN tb_status s ON j.id_status = s.id_status " &
-                             "ORDER BY j.uid ASC"
+                             "ORDER BY j.tgl_order DESC" ' 
             Using conn As MySqlConnection = GetConnection()
                 Using da As New MySqlDataAdapter(query, conn)
                     da.Fill(dt)
@@ -102,6 +102,7 @@ Module DataModule
         End Try
         Return dt
     End Function
+
 
     Public Function SimpanJoki(uid As String, user As String, pass As String, detail As String, id_lay As String, sulit As Integer, total As Integer) As Boolean
         Try
@@ -172,9 +173,13 @@ Module DataModule
         Try
             Dim query As String = "SELECT j.uid, j.username, j.password, j.detail, j.kesulitan, " &
                                   "CASE j.kesulitan WHEN 1 THEN l.kesulitan1 WHEN 2 THEN l.kesulitan2 WHEN 3 THEN l.kesulitan3 ELSE '-' END AS 'Tingkat Kesulitan', " &
-                                  "l.nama_layanan AS 'Jenis Layanan', j.total_harga " &
+                                  "l.nama_layanan AS 'Jenis Layanan', " &
+                                  "s.nama_status AS 'Status', " &
+                                  "j.total_harga, j.tgl_order " &
                                   "FROM tb_joki j INNER JOIN tb_layanan l ON j.id_layanan = l.id_layanan " &
-                                  "WHERE j.uid LIKE @key OR j.username LIKE @key OR j.detail LIKE @key OR l.nama_layanan LIKE @key"
+                                  "INNER JOIN tb_status s ON j.id_status = s.id_status " &
+                                  "WHERE j.uid LIKE @key OR j.username LIKE @key OR j.detail LIKE @key OR l.nama_layanan LIKE @key " &
+                                  "ORDER BY j.tgl_order DESC"
             Using conn As MySqlConnection = GetConnection()
                 Using da As New MySqlDataAdapter(query, conn)
                     da.SelectCommand.Parameters.AddWithValue("@key", "%" & keyword & "%")

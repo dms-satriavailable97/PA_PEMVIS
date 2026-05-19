@@ -12,9 +12,8 @@
       }
     ],
     "additionalProbingPaths": [
-      "C:\\Users\\rizal\\.dotnet\\store\\|arch|\\|tfm|",
-      "C:\\Users\\rizal\\.nuget\\packages",
-      "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      "C:\\Users\\Rumia\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\Rumia\\.nuget\\packages"
     ],
     "configProperties": {
       "System.Runtime.Serialization.EnableUnsafeBinaryFormatterSerialization": false,

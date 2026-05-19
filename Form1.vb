@@ -4,6 +4,7 @@ Public Class Form1
 
     Private dtLayanan As DataTable
     Private IsFromDatabase As Boolean = False
+    Private CurrentStatusText As String = ""
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         TampilData()
@@ -36,6 +37,7 @@ Public Class Form1
         lblHarga.Visible = False
         ErrorProvider1.Clear()
         IsFromDatabase = False
+        CurrentStatusText = ""
     End Sub
 
     Sub AturDGV()
@@ -46,6 +48,7 @@ Public Class Form1
             dgvJoki.Columns("detail").HeaderText = "Detail Target"
             If dgvJoki.Columns.Contains("kesulitan") Then dgvJoki.Columns("kesulitan").Visible = False
             dgvJoki.Columns("total_harga").HeaderText = "Total Tagihan"
+            dgvJoki.Columns("tgl_order").HeaderText = "Waktu Pemesanan"
         End If
     End Sub
 
@@ -169,6 +172,7 @@ Public Class Form1
             End If
 
             IsFromDatabase = True
+            CurrentStatusText = row.Cells("Status").Value.ToString()
         End If
     End Sub
 
@@ -205,10 +209,23 @@ Public Class Form1
             Exit Sub
         End If
 
-        If UpdateStatusJoki(txtUID.Text, "3") Then
-            MessageBox.Show("Status diupdate ke Selesai!")
-            TampilData()
-            Kosongkan()
+        If CurrentStatusText = "Pending" Then
+            MessageBox.Show("Aksi Ditolak! Pesanan ini masih berstatus 'Pending'." & vbCrLf & "Anda harus memprosesnya terlebih dahulu dengan menekan tombol 'Update Diproses' sebelum menyelesaikannya.", "Alur Kerja Salah", MessageBoxButtons.OK, MessageBoxIcon.Stop)
+            Exit Sub
+
+        ElseIf CurrentStatusText = "Selesai" Then
+            MessageBox.Show("Pesanan ini memang sudah berstatus 'Selesai'!", "Informasi", MessageBoxButtons.OK, MessageBoxIcon.Information)
+            Exit Sub
+        End If
+
+        Dim konfirmasi = MessageBox.Show("Apakah Anda yakin ingin menyelesaikan pesanan dengan UID " & txtUID.Text & "?" & vbCrLf & "Tindakan ini akan mengonstruksikan tagihan keuangan ke pendapatan.", "Konfirmasi Selesai", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
+
+        If konfirmasi = DialogResult.Yes Then
+            If UpdateStatusJoki(txtUID.Text, "3") Then
+                MessageBox.Show("Status berhasil diupdate ke Selesai!", "Sukses", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                TampilData()
+                Kosongkan()
+            End If
         End If
     End Sub
 
@@ -219,6 +236,30 @@ Public Class Form1
 
     Private Sub Form1_FormClosed(sender As Object, e As FormClosedEventArgs) Handles MyBase.FormClosed
         FormLogin.Show()
+    End Sub
+    Private Sub btnProses_Click(sender As Object, e As EventArgs) Handles btnProses.Click
+        If Not IsFromDatabase OrElse txtUID.Text = "" Then
+            MessageBox.Show("Pilih data aktif dari tabel terlebih dahulu!", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+            Exit Sub
+        End If
+
+        If CurrentStatusText = "Diproses" Then
+            MessageBox.Show("Pesanan ini sudah berstatus 'Diproses'!", "Informasi", MessageBoxButtons.OK, MessageBoxIcon.Information)
+            Exit Sub
+        ElseIf CurrentStatusText = "Selesai" Then
+            MessageBox.Show("Pesanan sudah selesai, status tidak dapat diturunkan kembali!", "Aksi Ditolak", MessageBoxButtons.OK, MessageBoxIcon.Stop)
+            Exit Sub
+        End If
+
+        Dim konfirmasi = MessageBox.Show("Apakah Anda yakin ingin mengubah status pesanan UID " & txtUID.Text & " menjadi 'Diproses'?", "Konfirmasi Proses", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
+
+        If konfirmasi = DialogResult.Yes Then
+            If UpdateStatusJoki(txtUID.Text, "2") Then
+                MessageBox.Show("Status berhasil diupdate menjadi Diproses!", "Sukses", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                TampilData()
+                Kosongkan()
+            End If
+        End If
     End Sub
 
 End Class

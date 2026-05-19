@@ -18,6 +18,7 @@ Partial Class Form2
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         components = New ComponentModel.Container()
+        Dim DataGridViewCellStyle1 As DataGridViewCellStyle = New DataGridViewCellStyle()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form2))
         LabelTitle = New Label()
         LabelID = New Label()
@@ -45,7 +46,7 @@ Partial Class Form2
         ' LabelTitle
         ' 
         LabelTitle.BackColor = Color.Transparent
-        LabelTitle.Font = New Font("Cooper Black", 14.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        LabelTitle.Font = New Font("Cooper Black", 14F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         LabelTitle.Location = New Point(28, 27)
         LabelTitle.Name = "LabelTitle"
         LabelTitle.Size = New Size(523, 25)
@@ -55,7 +56,7 @@ Partial Class Form2
         ' LabelID
         ' 
         LabelID.BackColor = Color.Transparent
-        LabelID.Font = New Font("Cooper Black", 8.0F)
+        LabelID.Font = New Font("Cooper Black", 8F)
         LabelID.Location = New Point(28, 75)
         LabelID.Name = "LabelID"
         LabelID.Size = New Size(189, 23)
@@ -65,7 +66,7 @@ Partial Class Form2
         ' LabelNama
         ' 
         LabelNama.BackColor = Color.Transparent
-        LabelNama.Font = New Font("Cooper Black", 8.0F)
+        LabelNama.Font = New Font("Cooper Black", 8F)
         LabelNama.Location = New Point(28, 110)
         LabelNama.Name = "LabelNama"
         LabelNama.Size = New Size(213, 23)
@@ -75,7 +76,7 @@ Partial Class Form2
         ' LabelHarga
         ' 
         LabelHarga.BackColor = Color.Transparent
-        LabelHarga.Font = New Font("Cooper Black", 8.0F)
+        LabelHarga.Font = New Font("Cooper Black", 8F)
         LabelHarga.Location = New Point(28, 145)
         LabelHarga.Name = "LabelHarga"
         LabelHarga.Size = New Size(189, 23)
@@ -85,7 +86,7 @@ Partial Class Form2
         ' LabelKesulitan1
         ' 
         LabelKesulitan1.BackColor = Color.Transparent
-        LabelKesulitan1.Font = New Font("Cooper Black", 8.0F)
+        LabelKesulitan1.Font = New Font("Cooper Black", 8F)
         LabelKesulitan1.Location = New Point(28, 180)
         LabelKesulitan1.Name = "LabelKesulitan1"
         LabelKesulitan1.Size = New Size(320, 23)
@@ -95,7 +96,7 @@ Partial Class Form2
         ' LabelKesulitan2
         ' 
         LabelKesulitan2.BackColor = Color.Transparent
-        LabelKesulitan2.Font = New Font("Cooper Black", 8.0F)
+        LabelKesulitan2.Font = New Font("Cooper Black", 8F)
         LabelKesulitan2.Location = New Point(28, 215)
         LabelKesulitan2.Name = "LabelKesulitan2"
         LabelKesulitan2.Size = New Size(320, 23)
@@ -105,7 +106,7 @@ Partial Class Form2
         ' LabelKesulitan3
         ' 
         LabelKesulitan3.BackColor = Color.Transparent
-        LabelKesulitan3.Font = New Font("Cooper Black", 8.0F)
+        LabelKesulitan3.Font = New Font("Cooper Black", 8F)
         LabelKesulitan3.Location = New Point(28, 250)
         LabelKesulitan3.Name = "LabelKesulitan3"
         LabelKesulitan3.Size = New Size(320, 23)
@@ -115,7 +116,7 @@ Partial Class Form2
         ' txtIDLayanan
         ' 
         txtIDLayanan.BackColor = Color.MintCream
-        txtIDLayanan.Font = New Font("Cooper Black", 8.0F)
+        txtIDLayanan.Font = New Font("Cooper Black", 8F)
         txtIDLayanan.Location = New Point(358, 72)
         txtIDLayanan.Name = "txtIDLayanan"
         txtIDLayanan.Size = New Size(200, 20)
@@ -124,7 +125,7 @@ Partial Class Form2
         ' txtNamaLayanan
         ' 
         txtNamaLayanan.BackColor = Color.MintCream
-        txtNamaLayanan.Font = New Font("Cooper Black", 8.0F)
+        txtNamaLayanan.Font = New Font("Cooper Black", 8F)
         txtNamaLayanan.Location = New Point(358, 107)
         txtNamaLayanan.Name = "txtNamaLayanan"
         txtNamaLayanan.Size = New Size(200, 20)
@@ -133,7 +134,7 @@ Partial Class Form2
         ' txtHargaDasar
         ' 
         txtHargaDasar.BackColor = Color.MintCream
-        txtHargaDasar.Font = New Font("Cooper Black", 8.0F)
+        txtHargaDasar.Font = New Font("Cooper Black", 8F)
         txtHargaDasar.Location = New Point(358, 142)
         txtHargaDasar.Name = "txtHargaDasar"
         txtHargaDasar.Size = New Size(200, 20)
@@ -142,7 +143,7 @@ Partial Class Form2
         ' txtKesulitan1
         ' 
         txtKesulitan1.BackColor = Color.MintCream
-        txtKesulitan1.Font = New Font("Cooper Black", 8.0F)
+        txtKesulitan1.Font = New Font("Cooper Black", 8F)
         txtKesulitan1.Location = New Point(358, 177)
         txtKesulitan1.Name = "txtKesulitan1"
         txtKesulitan1.Size = New Size(200, 20)
@@ -151,7 +152,7 @@ Partial Class Form2
         ' txtKesulitan2
         ' 
         txtKesulitan2.BackColor = Color.MintCream
-        txtKesulitan2.Font = New Font("Cooper Black", 8.0F)
+        txtKesulitan2.Font = New Font("Cooper Black", 8F)
         txtKesulitan2.Location = New Point(358, 212)
         txtKesulitan2.Name = "txtKesulitan2"
         txtKesulitan2.Size = New Size(200, 20)
@@ -160,7 +161,7 @@ Partial Class Form2
         ' txtKesulitan3
         ' 
         txtKesulitan3.BackColor = Color.MintCream
-        txtKesulitan3.Font = New Font("Cooper Black", 8.0F)
+        txtKesulitan3.Font = New Font("Cooper Black", 8F)
         txtKesulitan3.Location = New Point(358, 247)
         txtKesulitan3.Name = "txtKesulitan3"
         txtKesulitan3.Size = New Size(200, 20)
@@ -168,10 +169,21 @@ Partial Class Form2
         ' 
         ' dgvMasterLayanan
         ' 
+        dgvMasterLayanan.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells
         dgvMasterLayanan.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        DataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle1.BackColor = SystemColors.Window
+        DataGridViewCellStyle1.Font = New Font("Segoe UI", 9.0F)
+        DataGridViewCellStyle1.ForeColor = SystemColors.ControlText
+        DataGridViewCellStyle1.SelectionBackColor = Color.DarkGoldenrod
+        DataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText
+        DataGridViewCellStyle1.WrapMode = DataGridViewTriState.False
+        dgvMasterLayanan.DefaultCellStyle = DataGridViewCellStyle1
         dgvMasterLayanan.Location = New Point(588, 45)
         dgvMasterLayanan.Name = "dgvMasterLayanan"
+        dgvMasterLayanan.ReadOnly = True
         dgvMasterLayanan.RowHeadersWidth = 62
+        dgvMasterLayanan.SelectionMode = DataGridViewSelectionMode.FullRowSelect
         dgvMasterLayanan.Size = New Size(303, 340)
         dgvMasterLayanan.TabIndex = 13
         ' 

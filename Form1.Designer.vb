@@ -47,6 +47,7 @@ Partial Class Form1
         btnLihatPendapatan = New Button()
         btnSelesai = New Button()
         lblHarga = New Label()
+        btnProses = New Button()
         CType(dgvJoki, ComponentModel.ISupportInitialize).BeginInit()
         CType(ErrorProvider1, ComponentModel.ISupportInitialize).BeginInit()
         CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
@@ -145,7 +146,7 @@ Partial Class Form1
         dgvJoki.ColumnHeadersHeight = 34
         DataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle1.BackColor = SystemColors.Window
-        DataGridViewCellStyle1.Font = New Font("Segoe UI", 9.0F)
+        DataGridViewCellStyle1.Font = New Font("Segoe UI", 9F)
         DataGridViewCellStyle1.ForeColor = SystemColors.ControlText
         DataGridViewCellStyle1.SelectionBackColor = Color.Red
         DataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText
@@ -162,7 +163,7 @@ Partial Class Form1
         ' btnUbah
         ' 
         btnUbah.BackColor = Color.DarkRed
-        btnUbah.Font = New Font("Microsoft Sans Serif", 9.0F)
+        btnUbah.Font = New Font("Microsoft Sans Serif", 9F)
         btnUbah.ForeColor = Color.White
         btnUbah.Location = New Point(20, 344)
         btnUbah.Name = "btnUbah"
@@ -174,7 +175,7 @@ Partial Class Form1
         ' btnHapus
         ' 
         btnHapus.BackColor = Color.DarkRed
-        btnHapus.Font = New Font("Microsoft Sans Serif", 9.0F)
+        btnHapus.Font = New Font("Microsoft Sans Serif", 9F)
         btnHapus.ForeColor = Color.White
         btnHapus.Location = New Point(181, 344)
         btnHapus.Name = "btnHapus"
@@ -186,7 +187,7 @@ Partial Class Form1
         ' btnBatal
         ' 
         btnBatal.BackColor = Color.DarkRed
-        btnBatal.Font = New Font("Microsoft Sans Serif", 9.0F)
+        btnBatal.Font = New Font("Microsoft Sans Serif", 9F)
         btnBatal.ForeColor = Color.White
         btnBatal.Location = New Point(342, 344)
         btnBatal.Name = "btnBatal"
@@ -198,7 +199,7 @@ Partial Class Form1
         ' btnMasterLayanan
         ' 
         btnMasterLayanan.BackColor = Color.DarkRed
-        btnMasterLayanan.Font = New Font("Microsoft Sans Serif", 9.0F)
+        btnMasterLayanan.Font = New Font("Microsoft Sans Serif", 9F)
         btnMasterLayanan.ForeColor = SystemColors.Control
         btnMasterLayanan.Location = New Point(683, 12)
         btnMasterLayanan.Name = "btnMasterLayanan"
@@ -221,7 +222,7 @@ Partial Class Form1
         ' Label1
         ' 
         Label1.BackColor = Color.Transparent
-        Label1.Font = New Font("Microsoft Sans Serif", 9.0F, FontStyle.Bold)
+        Label1.Font = New Font("Microsoft Sans Serif", 9F, FontStyle.Bold)
         Label1.ForeColor = Color.White
         Label1.Location = New Point(11, 232)
         Label1.Name = "Label1"
@@ -232,7 +233,7 @@ Partial Class Form1
         ' Label2
         ' 
         Label2.BackColor = Color.Transparent
-        Label2.Font = New Font("Microsoft Sans Serif", 9.0F, FontStyle.Bold)
+        Label2.Font = New Font("Microsoft Sans Serif", 9F, FontStyle.Bold)
         Label2.ForeColor = Color.White
         Label2.Location = New Point(11, 144)
         Label2.Name = "Label2"
@@ -250,7 +251,7 @@ Partial Class Form1
         ' LabelSulit
         ' 
         LabelSulit.BackColor = Color.Transparent
-        LabelSulit.Font = New Font("Microsoft Sans Serif", 9.0F, FontStyle.Bold)
+        LabelSulit.Font = New Font("Microsoft Sans Serif", 9F, FontStyle.Bold)
         LabelSulit.ForeColor = Color.White
         LabelSulit.Location = New Point(11, 300)
         LabelSulit.Name = "LabelSulit"
@@ -307,9 +308,9 @@ Partial Class Form1
         btnLihatPendapatan.BackColor = Color.DarkRed
         btnLihatPendapatan.Font = New Font("Microsoft Sans Serif", 9F)
         btnLihatPendapatan.ForeColor = SystemColors.Control
-        btnLihatPendapatan.Location = New Point(372, 607)
+        btnLihatPendapatan.Location = New Point(479, 607)
         btnLihatPendapatan.Name = "btnLihatPendapatan"
-        btnLihatPendapatan.Size = New Size(319, 46)
+        btnLihatPendapatan.Size = New Size(212, 46)
         btnLihatPendapatan.TabIndex = 24
         btnLihatPendapatan.Text = "Lihat Pendapatan"
         btnLihatPendapatan.UseVisualStyleBackColor = False
@@ -319,9 +320,9 @@ Partial Class Form1
         btnSelesai.BackColor = Color.DarkRed
         btnSelesai.Font = New Font("Microsoft Sans Serif", 9F)
         btnSelesai.ForeColor = SystemColors.Control
-        btnSelesai.Location = New Point(20, 607)
+        btnSelesai.Location = New Point(250, 607)
         btnSelesai.Name = "btnSelesai"
-        btnSelesai.Size = New Size(342, 46)
+        btnSelesai.Size = New Size(212, 46)
         btnSelesai.TabIndex = 25
         btnSelesai.Text = "Update Selesai"
         btnSelesai.UseVisualStyleBackColor = False
@@ -338,11 +339,24 @@ Partial Class Form1
         lblHarga.Text = "Tingkat Kesulitan"
         lblHarga.Visible = False
         ' 
+        ' btnProses
+        ' 
+        btnProses.BackColor = Color.DarkRed
+        btnProses.Font = New Font("Microsoft Sans Serif", 9F)
+        btnProses.ForeColor = SystemColors.Control
+        btnProses.Location = New Point(20, 607)
+        btnProses.Name = "btnProses"
+        btnProses.Size = New Size(212, 46)
+        btnProses.TabIndex = 27
+        btnProses.Text = "Update Diproses"
+        btnProses.UseVisualStyleBackColor = False
+        ' 
         ' Form1
         ' 
         BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), Image)
         BackgroundImageLayout = ImageLayout.Stretch
         ClientSize = New Size(1009, 665)
+        Controls.Add(btnProses)
         Controls.Add(lblHarga)
         Controls.Add(btnSelesai)
         Controls.Add(btnLihatPendapatan)
@@ -410,4 +424,5 @@ Partial Class Form1
     Friend WithEvents btnSelesai As Button
     Friend WithEvents btnLihatPendapatan As Button
     Friend WithEvents lblHarga As Label
+    Friend WithEvents btnProses As Button
 End Class

@@ -33,13 +33,16 @@ Partial Class FormPembayaran
         lblUID = New Label()
         lblDetail = New Label()
         lblLayananKesulitan = New Label()
+        lblKirimBukti = New Label()
+        lblAtasNama2 = New Label()
+        lblKirimBukti2 = New Label()
         CType(picQR, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
         ' 
         ' Label4
         ' 
         Label4.BackColor = Color.Transparent
-        Label4.Font = New Font("Monotype Corsiva", 36F, FontStyle.Bold Or FontStyle.Italic Or FontStyle.Underline, GraphicsUnit.Point, CByte(0))
+        Label4.Font = New Font("Monotype Corsiva", 36.0F, FontStyle.Bold Or FontStyle.Italic Or FontStyle.Underline, GraphicsUnit.Point, CByte(0))
         Label4.ForeColor = Color.IndianRed
         Label4.Location = New Point(810, 55)
         Label4.Name = "Label4"
@@ -51,20 +54,20 @@ Partial Class FormPembayaran
         ' lblTotal
         ' 
         lblTotal.BackColor = Color.Transparent
-        lblTotal.Font = New Font("Microsoft Sans Serif", 11.25F, FontStyle.Bold)
+        lblTotal.Font = New Font("Microsoft Sans Serif", 9.0F, FontStyle.Bold)
         lblTotal.ForeColor = Color.Coral
-        lblTotal.Location = New Point(810, 166)
+        lblTotal.Location = New Point(810, 150)
         lblTotal.Name = "lblTotal"
-        lblTotal.Size = New Size(500, 40)
+        lblTotal.Size = New Size(500, 30)
         lblTotal.TabIndex = 48
         lblTotal.Text = "Total Tagihan :"
         ' 
         ' lblMetode
         ' 
         lblMetode.BackColor = Color.Transparent
-        lblMetode.Font = New Font("Microsoft Sans Serif", 11.25F, FontStyle.Bold)
+        lblMetode.Font = New Font("Microsoft Sans Serif", 9.0F, FontStyle.Bold)
         lblMetode.ForeColor = Color.Coral
-        lblMetode.Location = New Point(810, 326)
+        lblMetode.Location = New Point(810, 261)
         lblMetode.Name = "lblMetode"
         lblMetode.Size = New Size(500, 40)
         lblMetode.TabIndex = 49
@@ -73,9 +76,9 @@ Partial Class FormPembayaran
         ' lblInstruksi
         ' 
         lblInstruksi.BackColor = Color.Transparent
-        lblInstruksi.Font = New Font("Microsoft Sans Serif", 11.25F, FontStyle.Bold)
+        lblInstruksi.Font = New Font("Microsoft Sans Serif", 9.0F, FontStyle.Bold)
         lblInstruksi.ForeColor = Color.Coral
-        lblInstruksi.Location = New Point(810, 366)
+        lblInstruksi.Location = New Point(801, 301)
         lblInstruksi.Name = "lblInstruksi"
         lblInstruksi.Size = New Size(500, 40)
         lblInstruksi.TabIndex = 50
@@ -85,18 +88,18 @@ Partial Class FormPembayaran
         ' txtInfoBayar
         ' 
         txtInfoBayar.Font = New Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        txtInfoBayar.Location = New Point(870, 410)
+        txtInfoBayar.Location = New Point(870, 328)
         txtInfoBayar.Margin = New Padding(3, 4, 3, 4)
         txtInfoBayar.Name = "txtInfoBayar"
         txtInfoBayar.ReadOnly = True
-        txtInfoBayar.Size = New Size(386, 25)
+        txtInfoBayar.Size = New Size(386, 29)
         txtInfoBayar.TabIndex = 51
         txtInfoBayar.TextAlign = HorizontalAlignment.Center
         ' 
         ' picQR
         ' 
         picQR.Image = My.Resources.Resources.QRPembayaran
-        picQR.Location = New Point(966, 453)
+        picQR.Location = New Point(967, 328)
         picQR.Name = "picQR"
         picQR.Size = New Size(182, 182)
         picQR.SizeMode = PictureBoxSizeMode.Zoom
@@ -106,7 +109,7 @@ Partial Class FormPembayaran
         ' btnBatal
         ' 
         btnBatal.BackColor = Color.IndianRed
-        btnBatal.Font = New Font("Microsoft Sans Serif", 9F)
+        btnBatal.Font = New Font("Microsoft Sans Serif", 9.0F)
         btnBatal.ForeColor = Color.White
         btnBatal.Location = New Point(824, 666)
         btnBatal.Name = "btnBatal"
@@ -118,7 +121,7 @@ Partial Class FormPembayaran
         ' btnKonfirmasi
         ' 
         btnKonfirmasi.BackColor = Color.IndianRed
-        btnKonfirmasi.Font = New Font("Microsoft Sans Serif", 9F)
+        btnKonfirmasi.Font = New Font("Microsoft Sans Serif", 9.0F)
         btnKonfirmasi.ForeColor = Color.White
         btnKonfirmasi.Location = New Point(1137, 666)
         btnKonfirmasi.Name = "btnKonfirmasi"
@@ -130,42 +133,78 @@ Partial Class FormPembayaran
         ' lblUID
         ' 
         lblUID.BackColor = Color.Transparent
-        lblUID.Font = New Font("Microsoft Sans Serif", 11.25F, FontStyle.Bold)
+        lblUID.Font = New Font("Microsoft Sans Serif", 9.0F, FontStyle.Bold)
         lblUID.ForeColor = Color.Coral
-        lblUID.Location = New Point(810, 206)
+        lblUID.Location = New Point(810, 180)
         lblUID.Name = "lblUID"
-        lblUID.Size = New Size(500, 40)
+        lblUID.Size = New Size(500, 30)
         lblUID.TabIndex = 55
         lblUID.Text = "UID :"
         ' 
         ' lblDetail
         ' 
         lblDetail.BackColor = Color.Transparent
-        lblDetail.Font = New Font("Microsoft Sans Serif", 11.25F, FontStyle.Bold)
+        lblDetail.Font = New Font("Microsoft Sans Serif", 9.0F, FontStyle.Bold)
         lblDetail.ForeColor = Color.Coral
-        lblDetail.Location = New Point(810, 246)
+        lblDetail.Location = New Point(810, 206)
         lblDetail.Name = "lblDetail"
-        lblDetail.Size = New Size(500, 40)
+        lblDetail.Size = New Size(500, 28)
         lblDetail.TabIndex = 56
         lblDetail.Text = "Target/Detail :"
         ' 
         ' lblLayananKesulitan
         ' 
         lblLayananKesulitan.BackColor = Color.Transparent
-        lblLayananKesulitan.Font = New Font("Microsoft Sans Serif", 11.25F, FontStyle.Bold)
+        lblLayananKesulitan.Font = New Font("Microsoft Sans Serif", 9.0F, FontStyle.Bold)
         lblLayananKesulitan.ForeColor = Color.Coral
-        lblLayananKesulitan.Location = New Point(810, 286)
+        lblLayananKesulitan.Location = New Point(810, 234)
         lblLayananKesulitan.Name = "lblLayananKesulitan"
-        lblLayananKesulitan.Size = New Size(500, 40)
+        lblLayananKesulitan.Size = New Size(500, 27)
         lblLayananKesulitan.TabIndex = 57
-        lblLayananKesulitan.Text = "Layanan / Kesulitan :"
+        lblLayananKesulitan.Text = "Layanan / Kesulitan : "
+        ' 
+        ' lblKirimBukti
+        ' 
+        lblKirimBukti.BackColor = Color.Transparent
+        lblKirimBukti.Font = New Font("Microsoft Sans Serif", 9.0F, FontStyle.Bold)
+        lblKirimBukti.ForeColor = Color.Coral
+        lblKirimBukti.Location = New Point(801, 533)
+        lblKirimBukti.Name = "lblKirimBukti"
+        lblKirimBukti.Size = New Size(500, 40)
+        lblKirimBukti.TabIndex = 59
+        lblKirimBukti.Text = "Kirim Bukti Pembayaran Ke No :"
+        ' 
+        ' lblAtasNama2
+        ' 
+        lblAtasNama2.BackColor = Color.Transparent
+        lblAtasNama2.Font = New Font("Microsoft Sans Serif", 9.0F, FontStyle.Bold)
+        lblAtasNama2.ForeColor = Color.Coral
+        lblAtasNama2.Location = New Point(810, 371)
+        lblAtasNama2.Name = "lblAtasNama2"
+        lblAtasNama2.Size = New Size(500, 40)
+        lblAtasNama2.TabIndex = 60
+        lblAtasNama2.Text = "Atas Nama : "
+        ' 
+        ' lblKirimBukti2
+        ' 
+        lblKirimBukti2.BackColor = Color.Transparent
+        lblKirimBukti2.Font = New Font("Microsoft Sans Serif", 9.0F, FontStyle.Bold)
+        lblKirimBukti2.ForeColor = Color.Coral
+        lblKirimBukti2.Location = New Point(810, 401)
+        lblKirimBukti2.Name = "lblKirimBukti2"
+        lblKirimBukti2.Size = New Size(500, 40)
+        lblKirimBukti2.TabIndex = 61
+        lblKirimBukti2.Text = "Kirim Bukti Pembayaran Ke No :"
         ' 
         ' FormPembayaran
         ' 
         AutoScaleMode = AutoScaleMode.None
         BackgroundImage = My.Resources.Resources.ColumbinaMy
         BackgroundImageLayout = ImageLayout.Zoom
-        ClientSize = New Size(1445, 819)
+        ClientSize = New Size(1443, 811)
+        Controls.Add(lblKirimBukti2)
+        Controls.Add(lblAtasNama2)
+        Controls.Add(lblKirimBukti)
         Controls.Add(lblLayananKesulitan)
         Controls.Add(lblDetail)
         Controls.Add(lblUID)
@@ -198,4 +237,7 @@ Partial Class FormPembayaran
     Friend WithEvents lblUID As Label
     Friend WithEvents lblDetail As Label
     Friend WithEvents lblLayananKesulitan As Label
+    Friend WithEvents lblKirimBukti As Label
+    Friend WithEvents lblAtasNama2 As Label
+    Friend WithEvents lblKirimBukti2 As Label
 End Class

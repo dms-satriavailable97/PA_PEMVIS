@@ -28,19 +28,53 @@
         If metodeLower.Contains("bank") OrElse metodeLower.Contains("transfer") Then
             picQR.Visible = False
             lblInstruksi.Text = "Silakan transfer ke Virtual Account (VA) berikut :"
-            txtInfoBayar.Text = "8890" & DateTime.Now.ToString("MMddHHmmss")
+            txtInfoBayar.Text = "8890" & DateTime.Now.ToString("ddHHmmss") & _uid
             txtInfoBayar.Visible = True
+            lblKirimBukti.Visible = False
+            lblAtasNama2.Visible = False
+            lblKirimBukti2.Visible = False
 
-        ElseIf metodeLower.Contains("qris") OrElse metodeLower.Contains("gopay") OrElse metodeLower.Contains("shopee") OrElse metodeLower.Contains("dana") Then
+        ElseIf metodeLower.Contains("qris") OrElse metodeLower.Contains("shopee") Then
             picQR.Visible = True
-            lblInstruksi.Text = "Silakan scan QR Code berikut atau hubungi WA Admin :"
-            txtInfoBayar.Text = "WA Admin : 0812-3456-7890"
+            lblInstruksi.Text = "Silakan scan QR Code berikut :"
+            txtInfoBayar.Visible = False
+            lblKirimBukti.Text = "Kirim bukti pembayaran ke WA Admin : 0812-3456-7890"
+            lblKirimBukti.Visible = True
+            lblAtasNama2.Visible = False
+            lblKirimBukti2.Visible = False
+
+        ElseIf metodeLower.Contains("dana") OrElse metodeLower.Contains("gopay") OrElse metodeLower.Contains("ovo") Then
+            picQR.Visible = False
+            lblInstruksi.Text = "Silakan transfer ke nomor E-Wallet berikut :"
+
+            Dim rand As New Random()
+            Dim pilihan As Integer = rand.Next(1, 4)
+
+            If pilihan = 1 Then
+                txtInfoBayar.Text = "0811-1111-1111"
+                lblAtasNama2.Text = "a.n. Dimas"
+            ElseIf pilihan = 2 Then
+                txtInfoBayar.Text = "0822-2222-2222"
+                lblAtasNama2.Text = "a.n. Rizal"
+            Else
+                txtInfoBayar.Text = "0833-3333-3333"
+                lblAtasNama2.Text = "a.n. Febrian"
+            End If
+
             txtInfoBayar.Visible = True
+            lblKirimBukti.Visible = False
+            lblAtasNama2.Visible = True
+            lblKirimBukti2.Text = "Kirim bukti pembayaran ke WA Admin : 0812-3456-7890"
+            lblKirimBukti2.Visible = True
+
         Else
             picQR.Visible = False
             lblInstruksi.Text = "Silakan selesaikan pembayaran ke WA Admin."
             txtInfoBayar.Text = "WA Admin : 0812-3456-7890"
             txtInfoBayar.Visible = True
+            lblKirimBukti.Visible = False
+            lblAtasNama2.Visible = False
+            lblKirimBukti2.Visible = False
         End If
     End Sub
 
